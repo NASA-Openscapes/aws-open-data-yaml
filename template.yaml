@@ -1,0 +1,21 @@
+Name: <CHANGE THIS and add your dataset name here>
+Description: |
+  <CHANGE THIS and add your dataset description here>
+  <br/><br/>
+  Read our doc on how to get AWS Credentials to retrieve this data: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentialsREADME<br>
+Documentation: <CHANGE THIS To your dataset documentation or write it out here>
+Contact: <CHANGE THIS to your group's contact email>
+ManagedBy: NASA
+UpdateFrequency: | 
+  <CHANGE THIS to explain when you will update the dataset>
+Tags:
+  - aws-pds
+  - <CHANGE THIS TO ADD MORE TAGS HERE OR REMOVE THIS BEFORE SUBMITTING. See https://github.com/awslabs/open-data-registry/blob/main/tags.yaml>
+License: [Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+Resources:
+  - Description: <CHANGE THIS to your dataset name> Dataset
+    ARN: arn:aws:s3:::<CHANGE THIS to your bucketname>
+    Region: us-west-2 <CHANGE THIS IF YOUR REGION IS NOT us-west-2>
+    Type: S3 Bucket
+    RequesterPays: false
+    ControlledAccess: https://data.lpdaac.earthdatacloud.nasa.gov
