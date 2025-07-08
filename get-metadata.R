@@ -204,7 +204,7 @@ yaml_data <- list(
 
 write_yaml(
   yaml_data,
-  file = paste0("nasa-", slugify(shortname), ".yaml"),
+  file = file.path("yaml", paste0("nasa-", slugify(shortname), ".yaml")),
   indent.mapping.sequence = TRUE,
   handlers = list(logical = verbatim_logical, character = trimws)
 )
