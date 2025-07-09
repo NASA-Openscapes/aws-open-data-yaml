@@ -184,11 +184,7 @@ yaml_data <- list(
     umm$Abstract,
     "\nRead our doc on how to get AWS Credentials to retrieve this data: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentialsREADME"
   ),
-  Documentation = paste0(
-    "https://cmr.earthdata.nasa.gov/search/concepts/",
-    meta[["concept-id"]],
-    ".html"
-  ),
+  Documentation = paste0(umm$DOI$Authority, "/", umm$DOI$DOI),
   Contact = get_contact_info(umm),
   ManagedBy = "NASA",
   UpdateFrequency = get_update_frequency(umm),
