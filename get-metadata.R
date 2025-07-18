@@ -4,21 +4,13 @@ library(yaml)
 library(googlesheets4)
 library(dplyr)
 library(slugify)
+library(readr)
 
 ######
 
-get_tutorials <- function(
-  shortname,
-  sheet = "https://docs.google.com/spreadsheets/d/1ZqlYRvoZnLZIl5eOJ2gGUuu5E9K_P2c446RPHJ4B06w",
-  email = "andy@openscapes.org"
-) {
-  gs4_auth(email = email)
-
-  tutorials <- read_sheet(
-    sheet,
-    col_names = TRUE
-  ) |>
-    filter(shortname == shortname) |>
+get_tutorials <- function(tutorials_df, shortname) {
+  tutorials <- tutorials_df |>
+    filter(.data$shortname == .env$shortname) |>
     select(-shortname)
 
   # Convert to a list of lists
@@ -27,8 +19,12 @@ get_tutorials <- function(
   # Remove any NA elements
   ret <- map(ret, \(x) {
     keep(x, \(x) !is.na(x))
-  })
+  }) |>
+    compact()
 
+  if (length(ret) == 0) {
+    return(NULL)
+  }
   ret
 }
 
@@ -44,7 +40,12 @@ get_metadata <- function(
     ) |>
     req_perform()
 
-  resp_body_json(resp)$items[[1]]
+  items <- resp_body_json(resp)$items
+  if (is.null(items) || length(items) == 0) {
+    warning(paste("No metadata found for shortname:", shortname), call. = FALSE)
+    return(NULL)
+  }
+  items[[1]]
 }
 
 get_update_frequency <- function(umm) {
@@ -87,31 +88,33 @@ get_contact_info <- function(umm) {
   cgs <- map_chr(contact_groups, \(x) {
     group_name <- x[[1]]$GroupName
 
-    email <- map_chr(
+    email <- safely(keep)(
       x[[1]]$ContactInformation$ContactMechanisms,
       \(y) y$Value[y$Type == "Email"]
     )
 
-    url_type <- map_chr(
-      x[[1]]$ContactInformation$RelatedUrls,
-      \(y) y$Type[y$URLContentType == "DataContactURL"]
-    )
-
-    url <- map_chr(
-      x[[1]]$ContactInformation$RelatedUrls,
-      \(y) y$URL[y$URLContentType == "DataContactURL"]
-    )
+    # url <- keep(
+    #   x[[1]]$ContactInformation$RelatedUrls,
+    #   \(y) y$URL[y$URLContentType == "DataContactURL"]
+    # )
+    if (is.null(email) || length(email$Value) == 0) {
+      return("")
+    }
 
     paste0(
       group_name,
       ": ",
-      email,
-      ". ",
-      tools::toTitleCase(tolower(url_type)),
-      ": ",
-      url
+      email$Value,
+      # ". ",
+      # tools::toTitleCase(tolower(url$Type)),
+      # ": ",
+      # url$Value
     )
   })
+
+  if (length(cgs) == 0) {
+    return(NULL)
+  }
   paste0(unique(cgs), collapse = "\n")
 }
 
@@ -171,37 +174,52 @@ get_publications <- function(umm) {
 
 ### Main script to fetch metadata and write YAML file
 
-shortname <- "MUR-JPL-L4-GLOB-v4.1"
+# shortname <- "MUR-JPL-L4-GLOB-v4.1"
 
-metadata <- get_metadata(shortname)
+datasets <- read_csv("top_dist.csv") |>
+  pull("Short Name")
 
-meta <- metadata$meta
-umm <- metadata$umm
+gs4_auth(email = "andy@openscapes.org")
 
-yaml_data <- list(
-  Name = umm$EntryTitle,
-  Description = paste0(
-    umm$Abstract,
-    "\nRead our doc on how to get AWS Credentials to retrieve this data: ",
-    umm$DirectDistributionInformation$S3CredentialsAPIDocumentationURL
-  ),
-  Documentation = paste0(umm$DOI$Authority, "/", umm$DOI$DOI),
-  Contact = get_contact_info(umm),
-  ManagedBy = "NASA",
-  UpdateFrequency = get_update_frequency(umm),
-  Tags = get_tags(umm),
-  License = "[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)",
-  Resources = get_resources(umm),
-  ## Tutorials, publications
-  DataAtWork = list(
-    Publications = get_publications(umm),
-    Tutorials = get_tutorials(shortname)
+tutorials_df <- read_sheet(
+  "https://docs.google.com/spreadsheets/d/1ZqlYRvoZnLZIl5eOJ2gGUuu5E9K_P2c446RPHJ4B06w",
+  col_names = TRUE
+)
+
+for (shortname in datasets) {
+  metadata <- get_metadata(shortname)
+  if (is.null(metadata)) {
+    next
+  }
+
+  meta <- metadata$meta
+  umm <- metadata$umm
+
+  yaml_data <- list(
+    Name = umm$EntryTitle,
+    Description = paste0(
+      umm$Abstract,
+      "\nRead our doc on how to get AWS Credentials to retrieve this data: ",
+      umm$DirectDistributionInformation$S3CredentialsAPIDocumentationURL
+    ),
+    Documentation = paste0(umm$DOI$Authority, "/", umm$DOI$DOI),
+    Contact = get_contact_info(umm),
+    ManagedBy = "NASA",
+    UpdateFrequency = get_update_frequency(umm),
+    Tags = get_tags(umm),
+    License = "[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)",
+    Resources = get_resources(umm),
+    ## Tutorials, publications
+    DataAtWork = compact(list(
+      Publications = get_publications(umm),
+      Tutorials = get_tutorials(tutorials_df, shortname)
+    ))
   )
-)
 
-write_yaml(
-  yaml_data,
-  file = file.path("yaml", paste0("nasa-", slugify(shortname), ".yaml")),
-  indent.mapping.sequence = TRUE,
-  handlers = list(logical = verbatim_logical, character = trimws)
-)
+  write_yaml(
+    compact(yaml_data),
+    file = file.path("yaml", paste0("nasa-", slugify(shortname), ".yaml")),
+    indent.mapping.sequence = TRUE,
+    handlers = list(logical = verbatim_logical, character = trimws)
+  )
+}
