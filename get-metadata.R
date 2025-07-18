@@ -87,8 +87,7 @@ get_contact_info <- function(umm) {
 
   cgs <- map_chr(contact_groups, \(x) {
     group_name <- x[[1]]$GroupName
-
-    email <- safely(keep)(
+    email <- safely(map_chr)(
       x[[1]]$ContactInformation$ContactMechanisms,
       \(y) y$Value[y$Type == "Email"]
     )
@@ -97,14 +96,16 @@ get_contact_info <- function(umm) {
     #   x[[1]]$ContactInformation$RelatedUrls,
     #   \(y) y$URL[y$URLContentType == "DataContactURL"]
     # )
-    if (is.null(email) || length(email$Value) == 0) {
+    if (
+      !is.null(email$error) || length(email$result) == 0 || email$result == ""
+    ) {
       return("")
     }
 
     paste0(
       group_name,
       ": ",
-      email$Value,
+      email$result
       # ". ",
       # tools::toTitleCase(tolower(url$Type)),
       # ": ",
@@ -174,10 +175,10 @@ get_publications <- function(umm) {
 
 ### Main script to fetch metadata and write YAML file
 
-# shortname <- "MUR-JPL-L4-GLOB-v4.1"
-
 datasets <- read_csv("top_dist.csv") |>
   pull("Short Name")
+
+datasets <- c("MUR-JPL-L4-GLOB-v4.1", datasets)
 
 gs4_auth(email = "andy@openscapes.org")
 
@@ -187,6 +188,7 @@ tutorials_df <- read_sheet(
 )
 
 for (shortname in datasets) {
+  # shortname <- "MUR-JPL-L4-GLOB-v4.1"
   metadata <- get_metadata(shortname)
   if (is.null(metadata)) {
     next
