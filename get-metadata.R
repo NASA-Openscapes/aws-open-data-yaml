@@ -182,7 +182,8 @@ yaml_data <- list(
   Name = umm$EntryTitle,
   Description = paste0(
     umm$Abstract,
-    "\nRead our doc on how to get AWS Credentials to retrieve this data: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentialsREADME"
+    "\nRead our doc on how to get AWS Credentials to retrieve this data: ",
+    umm$DirectDistributionInformation$S3CredentialsAPIDocumentationURL
   ),
   Documentation = paste0(umm$DOI$Authority, "/", umm$DOI$DOI),
   Contact = get_contact_info(umm),
