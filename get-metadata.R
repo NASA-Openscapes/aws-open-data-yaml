@@ -75,11 +75,17 @@ get_update_frequency <- function(umm) {
 }
 
 get_tags <- function(umm) {
-  as.list(unique(unname(c(
+  tags <- unique(unname(c(
     "aws-pds",
     trimws(unlist(umm$ScienceKeywords)),
     trimws(unlist(umm$AncillaryKeywords))
-  ))))
+  )))
+
+  aws_tags <- read_yaml(
+    "https://raw.githubusercontent.com/awslabs/open-data-registry/refs/heads/main/tags.yaml"
+  )
+
+  aws_tags[tolower(aws_tags) %in% tolower(tags)]
 }
 
 get_contact_info <- function(umm) {
