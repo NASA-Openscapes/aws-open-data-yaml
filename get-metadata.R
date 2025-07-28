@@ -173,25 +173,12 @@ get_publications <- function(umm) {
   })
 }
 
-### Main script to fetch metadata and write YAML file
-
-datasets <- read_csv("top_dist.csv") |>
-  pull("Short Name")
-
-datasets <- c("MUR-JPL-L4-GLOB-v4.1", datasets)
-
-gs4_auth(email = "andy@openscapes.org")
-
-tutorials_df <- read_sheet(
-  "https://docs.google.com/spreadsheets/d/1ZqlYRvoZnLZIl5eOJ2gGUuu5E9K_P2c446RPHJ4B06w",
-  col_names = TRUE
-)
-
-for (shortname in datasets) {
-  # shortname <- "MUR-JPL-L4-GLOB-v4.1"
+write_nasa_aws_yaml <- function(shortname, tutorials_df, dir) {
   metadata <- get_metadata(shortname)
+
   if (is.null(metadata)) {
-    next
+    warning(paste("Skipping", shortname, "due to missing metadata."))
+    return(NULL)
   }
 
   meta <- metadata$meta
@@ -218,10 +205,43 @@ for (shortname in datasets) {
     ))
   )
 
-  write_yaml(
+  dir.create(dir, recursive = TRUE, showWarnings = FALSE)
+
+  yaml::write_yaml(
     compact(yaml_data),
-    file = file.path("yaml", paste0("nasa-", slugify(shortname), ".yaml")),
+    file = file.path(
+      dir,
+      paste0("nasa-", slugify(shortname), ".yaml")
+    ),
     indent.mapping.sequence = TRUE,
     handlers = list(logical = verbatim_logical, character = trimws)
+  )
+}
+
+### Main script to fetch metadata and write YAML file
+
+gs4_auth(email = "andy@openscapes.org")
+
+tutorials_df <- read_sheet(
+  "https://docs.google.com/spreadsheets/d/1ZqlYRvoZnLZIl5eOJ2gGUuu5E9K_P2c446RPHJ4B06w",
+  col_names = TRUE
+)
+
+## One test
+write_nasa_aws_yaml(
+  "MUR-JPL-L4-GLOB-v4.1",
+  tutorials_df,
+  "yaml"
+)
+
+## Top 50
+top_dist_datasets <- read_csv("top_dist.csv") |>
+  pull("Short Name")
+
+for (shortname in top_dist_datasets) {
+  write_nasa_aws_yaml(
+    shortname,
+    tutorials_df,
+    file.path("yaml", "nasa-top-dist")
   )
 }
