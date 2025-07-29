@@ -30,17 +30,10 @@ Contact: ''
 ManagedBy: NASA
 UpdateFrequency: From 1998-01-01 to Ongoing
 Tags:
+  - atmosphere
   - aws-pds
-  - EARTH SCIENCE
-  - ATMOSPHERE
-  - PRECIPITATION
-  - PRECIPITATION AMOUNT
-  - PRECIPITATION RATE
-  - SOLID PRECIPITATION
-  - SNOW
-  - LIQUID PRECIPITATION
-  - RAIN
-  - Atmosphere, Precipitation, Hydrology
+  - hydrology
+  - precipitation
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'GPM IMERG Final Precipitation L3 Half Hourly 0.1 degree x 0.1 degree

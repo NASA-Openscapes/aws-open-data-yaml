@@ -36,15 +36,7 @@ Contact: |-
   MODAPS USER SUPPORT TEAM: MODAPSUSO@lists.nasa.gov
 ManagedBy: NASA
 UpdateFrequency: From 2002-07-04 to Ongoing
-Tags:
-  - aws-pds
-  - EARTH SCIENCE
-  - SPECTRAL/ENGINEERING
-  - INFRARED WAVELENGTHS
-  - INFRARED RADIANCE
-  - REFLECTED INFRARED
-  - VISIBLE WAVELENGTHS
-  - VISIBLE RADIANCE
+Tags: aws-pds
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'MODIS/Aqua Calibrated Radiances 5-Min L1B Swath 250m. (Format: HDF-EOS)'

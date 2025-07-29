@@ -16,20 +16,8 @@ Contact: ''
 ManagedBy: NASA
 UpdateFrequency: From 2002-08-30 to Ongoing
 Tags:
+  - atmosphere
   - aws-pds
-  - EARTH SCIENCE
-  - ATMOSPHERE
-  - AEROSOLS
-  - DUST/ASH/SMOKE
-  - ATMOSPHERIC CHEMISTRY
-  - SULFUR COMPOUNDS
-  - SULFUR DIOXIDE
-  - SPECTRAL/ENGINEERING
-  - INFRARED WAVELENGTHS
-  - INFRARED RADIANCE
-  - Dust Flag
-  - Dust Score
-  - Volcanic Sulfur Dioxide Indicator
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'AIRS/Aqua L1B Infrared (IR) geolocated and calibrated radiances

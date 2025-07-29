@@ -25,14 +25,7 @@ Documentation: https://doi.org/10.5067/MODIS/MYD09GA.061
 Contact: ''
 ManagedBy: NASA
 UpdateFrequency: From 2002-07-04 to Ongoing (Daily - < Weekly)
-Tags:
-  - aws-pds
-  - EARTH SCIENCE
-  - LAND SURFACE
-  - SURFACE RADIATIVE PROPERTIES
-  - REFLECTANCE
-  - National Geospatial Data Asset
-  - NGDA
+Tags: aws-pds
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'MODIS/Aqua Surface Reflectance Daily L2G Global 1km and 500m SIN

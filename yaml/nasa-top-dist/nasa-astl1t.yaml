@@ -22,16 +22,7 @@ Description: |-
 Documentation: https://doi.org/10.5067/ASTER/AST_L1T.004
 ManagedBy: NASA
 UpdateFrequency: From 2000-03-04 to Ongoing (Varies)
-Tags:
-  - aws-pds
-  - EARTH SCIENCE
-  - SPECTRAL/ENGINEERING
-  - INFRARED WAVELENGTHS
-  - REFLECTED INFRARED
-  - THERMAL INFRARED
-  - VISIBLE WAVELENGTHS
-  - VISIBLE IMAGERY
-  - VISIBLE RADIANCE
+Tags: aws-pds
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'ASTER Level 1T Precision Terrain Corrected Registered At-Sensor

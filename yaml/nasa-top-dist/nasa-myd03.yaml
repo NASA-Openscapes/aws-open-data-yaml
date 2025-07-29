@@ -20,14 +20,7 @@ Documentation: https://doi.org//10.5067/MODIS/MYD03.061
 Contact: 'MODAPS USER SUPPORT TEAM: MODAPSUSO@lists.nasa.gov'
 ManagedBy: NASA
 UpdateFrequency: From 2002-07-03 to Ongoing
-Tags:
-  - aws-pds
-  - EARTH SCIENCE
-  - SPECTRAL/ENGINEERING
-  - PLATFORM CHARACTERISTICS
-  - ATTITUDE CHARACTERISTICS
-  - ORBITAL CHARACTERISTICS
-  - VIEWING GEOMETRY
+Tags: aws-pds
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'MODIS/Aqua Geolocation Fields 5-Min L1A Swath 1km. (Format: HDF-EOS)'

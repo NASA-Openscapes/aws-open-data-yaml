@@ -5,12 +5,7 @@ Description: |-
 Documentation: /10.5067/ATLAS/ATL08.006
 ManagedBy: NASA
 UpdateFrequency: From 2018-10-14 to Ongoing
-Tags:
-  - aws-pds
-  - EARTH SCIENCE
-  - LAND SURFACE
-  - TOPOGRAPHY
-  - TERRAIN ELEVATION
+Tags: aws-pds
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'ATLAS/ICESat-2 L3A Land and Vegetation Height V006. (Format: HDF5)'

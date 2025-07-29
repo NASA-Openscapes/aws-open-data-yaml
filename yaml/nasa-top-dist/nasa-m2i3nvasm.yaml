@@ -29,55 +29,13 @@ Contact: ''
 ManagedBy: NASA
 UpdateFrequency: From 1980-01-01 to Ongoing
 Tags:
+  - air temperature
+  - atmosphere
   - aws-pds
-  - EARTH SCIENCE
-  - ATMOSPHERE
-  - ATMOSPHERIC CHEMISTRY
-  - OXYGEN COMPOUNDS
-  - ATMOSPHERIC OZONE
-  - ATMOSPHERIC PRESSURE
-  - SEA LEVEL PRESSURE
-  - SURFACE PRESSURE
-  - PRESSURE THICKNESS
-  - ATMOSPHERIC WINDS
-  - SURFACE WINDS
-  - U/V WIND COMPONENTS
-  - UPPER LEVEL WINDS
-  - WIND DYNAMICS
-  - VORTICITY
-  - POTENTIAL VORTICITY
-  - VERTICAL WIND VELOCITY/SPEED
-  - ATMOSPHERIC TEMPERATURE
-  - UPPER AIR TEMPERATURE
-  - VERTICAL PROFILES
-  - SURFACE TEMPERATURE
-  - AIR TEMPERATURE
-  - ATMOSPHERIC WATER VAPOR
-  - WATER VAPOR INDICATORS
-  - HUMIDITY
-  - RELATIVE HUMIDITY
-  - SPECIFIC HUMIDITY
-  - CLOUDS
-  - CLOUD MICROPHYSICS
-  - CLOUD LIQUID WATER/ICE
-  - CLOUD PROPERTIES
-  - CLOUD FRACTION
-  - ALTITUDE
-  - GEOPOTENTIAL HEIGHT
-  - OZONE PROFILES
-  - BEDI
-  - Agriculture and Forestry
-  - Biodiversity
-  - Climate
-  - Disasters
-  - Terrestrial and Freshwater Ecosystems
-  - Human Health
-  - Ocean and Coastal Resources and Ecosystems
-  - Transportation
-  - Water Resources
-  - Weather
-  - O3
-  - ozone mixing ratio
+  - biodiversity
+  - climate
+  - transportation
+  - weather
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'MERRA-2 inst3_3d_asm_Nv: 3d,3-Hourly,Instantaneous,Model-Level,Assimilation,Assimilated

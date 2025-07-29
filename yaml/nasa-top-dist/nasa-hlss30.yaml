@@ -156,12 +156,7 @@ Documentation: https://doi.org/10.5067/HLS/HLSS30.002
 Contact: ''
 ManagedBy: NASA
 UpdateFrequency: From 2015-11-28 to Ongoing
-Tags:
-  - aws-pds
-  - EARTH SCIENCE
-  - LAND SURFACE
-  - SURFACE RADIATIVE PROPERTIES
-  - REFLECTANCE
+Tags: aws-pds
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'HLS Sentinel-2 Multi-spectral Instrument Surface Reflectance Daily

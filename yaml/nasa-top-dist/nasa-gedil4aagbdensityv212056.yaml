@@ -7,29 +7,8 @@ ManagedBy: NASA
 UpdateFrequency: From 2019-04-17 to 2024-11-27
 Tags:
   - aws-pds
-  - EARTH SCIENCE
-  - BIOSPHERE
-  - ECOSYSTEMS
-  - TERRESTRIAL ECOSYSTEMS
-  - GRASSLANDS
-  - VEGETATION
-  - CANOPY CHARACTERISTICS
-  - SHRUBLAND/SCRUB
-  - BIOMASS
-  - DECIDUOUS VEGETATION
-  - EVERGREEN VEGETATION
-  - FORESTS
-  - SPECTRAL/ENGINEERING
-  - LIDAR
-  - LIDAR WAVEFORM
-  - sub-orbital data
-  - aboveground biomass density
-  - model estimates
-  - Earth Science
-  - plant functional types (PFTs)
-  - geolocated laser footprints
-  - waveform relative height metrics
-  - GEDI algorithm
+  - ecosystems
+  - lidar
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'GEDI L4A Footprint Level Aboveground Biomass Density, Version 2.1.

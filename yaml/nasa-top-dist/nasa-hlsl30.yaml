@@ -156,12 +156,7 @@ Documentation: https://doi.org/10.5067/HLS/HLSL30.002
 Contact: ''
 ManagedBy: NASA
 UpdateFrequency: From 2013-04-11 to Ongoing
-Tags:
-  - aws-pds
-  - EARTH SCIENCE
-  - LAND SURFACE
-  - SURFACE RADIATIVE PROPERTIES
-  - REFLECTANCE
+Tags: aws-pds
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'HLS Landsat Operational Land Imager Surface Reflectance and TOA

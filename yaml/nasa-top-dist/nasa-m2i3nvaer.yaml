@@ -29,55 +29,14 @@ Contact: ''
 ManagedBy: NASA
 UpdateFrequency: From 1980-01-01 to Ongoing
 Tags:
+  - air quality
+  - atmosphere
   - aws-pds
-  - EARTH SCIENCE
-  - ATMOSPHERE
-  - AEROSOLS
-  - DUST/ASH/SMOKE
-  - CARBONACEOUS AEROSOLS
-  - ORGANIC PARTICLES
-  - SULFATE PARTICLES
-  - AIR QUALITY
-  - SULFUR OXIDES
-  - ATMOSPHERIC CHEMISTRY
-  - SULFUR COMPOUNDS
-  - SULFATE
-  - SULFUR DIOXIDE
-  - DIMETHYL SULFIDE
-  - AEROSOL PARTICLE PROPERTIES
-  - PARTICULATE MATTER
-  - ATMOSPHERIC PRESSURE
-  - SURFACE PRESSURE
-  - PRESSURE THICKNESS
-  - ATMOSPHERIC WATER VAPOR
-  - WATER VAPOR INDICATORS
-  - HUMIDITY
-  - RELATIVE HUMIDITY
-  - SEA SALT
-  - BLACK CARBON
-  - AIR MASS/DENSITY
-  - BEDI
-  - Agriculture and Forestry
-  - Biodiversity
-  - Climate
-  - Disasters
-  - Terrestrial and Freshwater Ecosystems
-  - Human Health
-  - Ocean and Coastal Resources and Ecosystems
-  - Transportation
-  - Water Resources
-  - Weather
-  - BC
-  - DMS
-  - MSA
-  - SO2
-  - SO4
-  - OC
-  - OM
-  - POM
-  - PM
-  - sulfate
-  - sulfur
+  - biodiversity
+  - climate
+  - msa
+  - transportation
+  - weather
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'MERRA-2 inst3_3d_aer_Nv: 3d,3-Hourly,Instantaneous,Model-Level,Assimilation,Aerosol

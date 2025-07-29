@@ -28,60 +28,14 @@ Contact: ''
 ManagedBy: NASA
 UpdateFrequency: From 1980-01-01 to Ongoing
 Tags:
+  - air temperature
+  - atmosphere
   - aws-pds
-  - EARTH SCIENCE
-  - ATMOSPHERE
-  - ALTITUDE
-  - GEOPOTENTIAL HEIGHT
-  - ATMOSPHERIC TEMPERATURE
-  - SURFACE TEMPERATURE
-  - SKIN TEMPERATURE
-  - UPPER AIR TEMPERATURE
-  - DEW POINT TEMPERATURE
-  - AIR TEMPERATURE
-  - CLOUDS
-  - CLOUD PROPERTIES
-  - CLOUD TOP TEMPERATURE
-  - ATMOSPHERIC WINDS
-  - SURFACE WINDS
-  - U/V WIND COMPONENTS
-  - UPPER LEVEL WINDS
-  - WIND DYNAMICS
-  - VERTICAL WIND VELOCITY/SPEED
-  - ATMOSPHERIC PRESSURE
-  - SEA LEVEL PRESSURE
-  - CLOUD TOP PRESSURE
-  - OCEANS
-  - OCEAN PRESSURE
-  - SURFACE PRESSURE
-  - ATMOSPHERIC WATER VAPOR
-  - WATER VAPOR INDICATORS
-  - HUMIDITY
-  - SPECIFIC HUMIDITY
-  - TOTAL PRECIPITABLE WATER
-  - CLOUD MICROPHYSICS
-  - CLOUD LIQUID WATER/ICE
-  - ATMOSPHERIC CHEMISTRY
-  - OXYGEN COMPOUNDS
-  - ATMOSPHERIC OZONE
-  - BOUNDARY LAYER WINDS
-  - TOTAL OZONE
-  - BEDI
-  - Agriculture and Forestry
-  - Biodiversity
-  - Climate
-  - Disasters
-  - Terrestrial and Freshwater Ecosystems
-  - Human Health
-  - Ocean and Coastal Resources and Ecosystems
-  - Transportation
-  - Water Resources
-  - Weather
-  - zero plane displacement height
-  - height
-  - surface pressure
-  - column ozone
-  - o3
+  - biodiversity
+  - climate
+  - oceans
+  - transportation
+  - weather
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'MERRA-2 tavg1_2d_slv_Nx: 2d,1-Hourly,Time-Averaged,Single-Level,Assimilation,Single-Level

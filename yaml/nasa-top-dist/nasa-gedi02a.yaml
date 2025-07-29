@@ -33,17 +33,7 @@ ManagedBy: NASA
 UpdateFrequency: From 2019-04-04 to 2023-03-16 (Varies)
 Tags:
   - aws-pds
-  - EARTH SCIENCE
-  - BIOSPHERE
-  - VEGETATION
-  - PLANT PHENOLOGY
-  - CANOPY CHARACTERISTICS
-  - VEGETATION COVER
-  - SPECTRAL/ENGINEERING
-  - LIDAR
-  - LAND SURFACE
-  - TOPOGRAPHY
-  - VEGETATION HEIGHT
+  - lidar
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'GEDI L2A Elevation and Height Metrics Data Global Footprint Level

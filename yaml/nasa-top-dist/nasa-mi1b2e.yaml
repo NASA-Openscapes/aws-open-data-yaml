@@ -19,16 +19,8 @@ Contact: ''
 ManagedBy: NASA
 UpdateFrequency: From 1999-12-18 to Ongoing
 Tags:
+  - atmosphere
   - aws-pds
-  - EARTH SCIENCE
-  - ATMOSPHERE
-  - ATMOSPHERIC PRESSURE
-  - SURFACE PRESSURE
-  - ATMOSPHERIC TEMPERATURE
-  - SPECTRAL/ENGINEERING
-  - VISIBLE WAVELENGTHS
-  - VISIBLE IMAGERY
-  - SURFACE TEMPERATURE
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'MISR Level 1B2 Ellipsoid Data V004. (Format: netCDF-4)'

@@ -18,14 +18,7 @@ Documentation: https://doi.org/10.5067/MODIS/MOD09GQ.061
 Contact: ''
 ManagedBy: NASA
 UpdateFrequency: From 2000-02-24 to Ongoing (Daily - < Weekly)
-Tags:
-  - aws-pds
-  - EARTH SCIENCE
-  - LAND SURFACE
-  - SURFACE RADIATIVE PROPERTIES
-  - REFLECTANCE
-  - National Geospatial Data Asset
-  - NGDA
+Tags: aws-pds
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'MODIS/Terra Surface Reflectance Daily L2G Global 250m SIN Grid V061.

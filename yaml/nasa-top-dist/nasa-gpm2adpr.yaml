@@ -10,14 +10,10 @@ Contact: ''
 ManagedBy: NASA
 UpdateFrequency: From 2014-03-08 to Ongoing
 Tags:
+  - atmosphere
   - aws-pds
-  - EARTH SCIENCE
-  - ATMOSPHERE
-  - ATMOSPHERIC WATER VAPOR
-  - PRECIPITATION
-  - SPECTRAL/ENGINEERING
-  - RADAR
-  - Atmosphere, Precipitation, Water Vapor
+  - precipitation
+  - radar
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'GPM DPR Precipitation Profile L2A 1.5 hours 5 km V07 (GPM_2ADPR)

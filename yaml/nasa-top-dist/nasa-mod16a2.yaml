@@ -29,17 +29,10 @@ Contact: ''
 ManagedBy: NASA
 UpdateFrequency: From 2021-01-01 to Ongoing (Weekly - < Monthly)
 Tags:
+  - atmosphere
   - aws-pds
-  - EARTH SCIENCE
-  - ATMOSPHERE
-  - ATMOSPHERIC WATER VAPOR
-  - WATER VAPOR PROCESSES
-  - EVAPOTRANSPIRATION
-  - PRECIPITATION
-  - PRECIPITATION PROFILES
-  - LATENT HEAT FLUX
-  - National Geospatial Data Asset
-  - NGDA
+  - evapotranspiration
+  - precipitation
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'MODIS/Terra Net Evapotranspiration 8-Day L4 Global 500m SIN Grid

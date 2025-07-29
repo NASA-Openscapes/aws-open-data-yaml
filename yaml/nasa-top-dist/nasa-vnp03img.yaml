@@ -7,15 +7,7 @@ Documentation: https://doi.org//10.5067/VIIRS/VNP03IMG.002
 Contact: 'MODAPS USER SUPPORT TEAM: MODAPSUSO@lists.nasa.gov'
 ManagedBy: NASA
 UpdateFrequency: From 2012-01-19 to Ongoing
-Tags:
-  - aws-pds
-  - EARTH SCIENCE
-  - SOLID EARTH
-  - GEODETICS
-  - COORDINATE REFERENCE SYSTEM
-  - SPECTRAL/ENGINEERING
-  - SENSOR CHARACTERISTICS
-  - VIEWING GEOMETRY
+Tags: aws-pds
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min
