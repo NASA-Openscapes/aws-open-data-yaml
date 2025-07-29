@@ -77,13 +77,32 @@ get_update_frequency <- function(umm) {
 get_tags <- function(umm) {
   tags <- unique(unname(c(
     "aws-pds",
-    trimws(unlist(umm$ScienceKeywords)),
-    trimws(unlist(umm$AncillaryKeywords))
+    trimws(unlist(strsplit(unlist(umm$ScienceKeywords) %||% "", ","))),
+    trimws(unlist(strsplit(unlist(umm$AncillaryKeywords) %||% "", ",")))
   )))
 
   aws_tags <- read_yaml(
     "https://raw.githubusercontent.com/awslabs/open-data-registry/refs/heads/main/tags.yaml"
   )
+
+  not_valid_tags <- setdiff(
+    tolower(tags),
+    tolower(aws_tags)
+  )
+
+  if (length(not_valid_tags) > 0) {
+    old_invalid_tags <- unique(
+      tolower(yaml::read_yaml("unlisted-tags.yaml")),
+      not_valid_tags
+    )
+
+    unique(c(
+      old_invalid_tags,
+      not_valid_tags
+    )) |>
+      sort() |>
+      yaml::write_yaml("unlisted-tags.yaml")
+  }
 
   aws_tags[tolower(aws_tags) %in% tolower(tags)]
 }
