@@ -91,20 +91,35 @@ get_tags <- function(umm) {
   )
 
   if (length(not_valid_tags) > 0) {
-    old_invalid_tags <- unique(
-      tolower(yaml::read_yaml("unlisted-tags.yaml")),
-      not_valid_tags
-    )
-
-    unique(c(
-      old_invalid_tags,
-      not_valid_tags
-    )) |>
-      sort() |>
-      yaml::write_yaml("unlisted-tags.yaml")
+    update_tag_counts(not_valid_tags, "unlisted_tags.csv")
   }
 
   aws_tags[tolower(aws_tags) %in% tolower(tags)]
+}
+
+update_tag_counts <- function(tags, csv_file) {
+  # Read existing CSV or create empty data frame if file doesn't exist
+  if (file.exists(csv_file)) {
+    tag_df <- read_csv(
+      csv_file,
+      col_types = cols(tag = col_character(), n = col_integer())
+    )
+  } else {
+    tag_df <- data.frame(tag = character(0), n = integer(0))
+  }
+
+  for (tag in tags) {
+    if (tag %in% tag_df$tag) {
+      # Increment existing tag count
+      tag_df$n[tag_df$tag == tag] <- tag_df$n[tag_df$tag == tag] + 1
+    } else {
+      # Add new tag with count of 1
+      tag_df <- bind_rows(tag_df, data.frame(tag = tag, n = 1L))
+    }
+  }
+
+  # Write updated data frame back to CSV
+  write_csv(tag_df, csv_file, append = FALSE)
 }
 
 get_contact_info <- function(umm) {
