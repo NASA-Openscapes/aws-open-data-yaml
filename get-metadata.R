@@ -165,7 +165,15 @@ get_resources <- function(umm) {
     stop("No Direct Distribution Information found in UMM.", call. = )
   }
 
-  list(
+  bucket <- umm$DirectDistributionInformation$S3BucketAndObjectPrefixNames
+  bucket_prot <- grep("protected", bucket, value = TRUE)
+  if (length(bucket_prot) == 0) {
+    bucket <- bucket[[1]]
+  } else {
+    bucket <- bucket_prot
+  }
+
+  ret <- list(
     list(
       Description = paste0(
         umm$EntryTitle,
@@ -181,11 +189,7 @@ get_resources <- function(umm) {
       ),
       ARN = paste0(
         "arn:aws:s3:::",
-        grep(
-          "protected",
-          umm$DirectDistributionInformation$S3BucketAndObjectPrefixNames,
-          value = TRUE
-        )
+        bucket
       ),
       Region = umm$DirectDistributionInformation$Region,
       Type = "S3 Bucket",
