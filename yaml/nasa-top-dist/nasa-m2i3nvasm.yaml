@@ -24,8 +24,8 @@ Description: "M2I3NVASM (or  inst3_3d_asm_Nv) is an instantaneous 3-dimensional 
   you may post your question to the NASA Earthdata Forum (forum.earthdata.nasa.gov)
   or email the GES DISC Help Desk (gsfc-dl-help-disc@mail.nasa.gov).\nRead our doc
   on how to get AWS Credentials to retrieve this data: https://data.gesdisc.earthdata.nasa.gov/s3credentialsREADME"
-Documentation: /10.5067/WWQSXQ8IVFW8
-Contact: ''
+Documentation: https://doi.org/10.5067/WWQSXQ8IVFW8
+Contact: 'GES DISC HELP DESK SUPPORT GROUP: gsfc-dl-help-disc@mail.nasa.gov'
 ManagedBy: NASA
 UpdateFrequency: From 1980-01-01 to Ongoing
 Tags:

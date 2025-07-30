@@ -15,7 +15,7 @@ Description: "MI1B2E_004 is the Multi-angle Imaging SpectroRadiometer (MISR) Lev
   canopy structure.\nRead our doc on how to get AWS Credentials to retrieve this data:
   https://data.asdc.earthdata.nasa.gov/s3credentialsREADME"
 Documentation: https://doi.org/10.5067/TERRA/MISR/MI1B2E_L1.004
-Contact: ''
+Contact: 'ASDC USER SERVICES: support-asdc@earthdata.nasa.gov'
 ManagedBy: NASA
 UpdateFrequency: From 1999-12-18 to Ongoing
 Tags:

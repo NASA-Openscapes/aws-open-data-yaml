@@ -28,7 +28,7 @@ Description: |-
   * Modified file name to include segment number and dataset version.
   Read our doc on how to get AWS Credentials to retrieve this data: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentialsREADME
 Documentation: https://doi.org/10.5067/GEDI/GEDI02_A.002
-Contact: ''
+Contact: 'User Services: lpdaac@usgs.gov'
 ManagedBy: NASA
 UpdateFrequency: From 2019-04-04 to 2023-03-16 (Varies)
 Tags:

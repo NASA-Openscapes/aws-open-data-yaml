@@ -6,8 +6,8 @@ Description: |-
   This is the latest version of this collection. The DOIs assigned to previous versions, which are no longer available, now direct
   to this page. For this collection the switchover occurred on June 1, 2020.
   Read our doc on how to get AWS Credentials to retrieve this data: https://data.gesdisc.earthdata.nasa.gov/s3credentialsREADME
-Documentation: /10.5067/VWD3DRC07UEN
-Contact: ''
+Documentation: https://doi.org/10.5067/VWD3DRC07UEN
+Contact: 'GES DISC HELP DESK SUPPORT GROUP: gsfc-dl-help-disc@mail.nasa.gov'
 ManagedBy: NASA
 UpdateFrequency: From 2002-08-30 to Ongoing
 Tags:

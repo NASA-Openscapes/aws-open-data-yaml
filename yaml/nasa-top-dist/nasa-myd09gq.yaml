@@ -21,7 +21,7 @@ Description: "The MYD09GQ Version 6.1 product provides an estimate of the surfac
   A polarization correction has been applied to the L1B Reflective Solar Bands (RSB).\nRead
   our doc on how to get AWS Credentials to retrieve this data: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentialsREADME"
 Documentation: https://doi.org/10.5067/MODIS/MYD09GQ.061
-Contact: ''
+Contact: 'User Services: lpdaac@usgs.gov'
 ManagedBy: NASA
 UpdateFrequency: From 2002-07-04 to Ongoing (Daily - < Weekly)
 Tags: aws-pds

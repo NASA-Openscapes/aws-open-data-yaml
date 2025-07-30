@@ -2,7 +2,7 @@ Name: SENTINEL-1A_DUAL_POL_GRD_HIGH_RES
 Description: |-
   Sentinel-1A Dual-pol ground projected high and full resolution images
   Read our doc on how to get AWS Credentials to retrieve this data: https://sentinel1.asf.alaska.edu/s3credentialsREADME
-Documentation: /
+Documentation: https://doi.org/
 ManagedBy: NASA
 UpdateFrequency: From 2014-04-03 to Ongoing
 Tags:

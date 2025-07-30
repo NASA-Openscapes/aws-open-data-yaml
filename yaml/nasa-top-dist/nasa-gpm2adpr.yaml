@@ -5,8 +5,8 @@ Description: |-
 
   2ADPR provides single- and dual-frequency-derived precipitation estimates from the Ku and Ka radars of the Dual-Frequency Precipitation Radar (DPR) on the core GPM spacecraft. The output consists of three main classes of precipitation products: those derived from the Ku-band frequency over a wide swath (245 km), those derived from the Ka-band frequency over a narrow swath (125 km), and those derived from the dual-frequency data over the narrow swath. The Ka-band results are further divided into the standard and high-sensitivity estimates. In the standard sensitivity mode, the fields of view within the inner swath are matched to those of the Ku-band. Data from these matched-beam Ku- and Ka-band fields of view are used to derive the dual-frequency precipitation products. The retrievals are performed at each radar range bin along the slant path of the radar instrument field of view (IFOV).
   Read our doc on how to get AWS Credentials to retrieve this data: https://data.gesdisc.earthdata.nasa.gov/s3credentialsREADME
-Documentation: /10.5067/GPM/DPR/GPM/2A/07
-Contact: ''
+Documentation: https://doi.org/10.5067/GPM/DPR/GPM/2A/07
+Contact: 'GES DISC HELP DESK SUPPORT GROUP: gsfc-dl-help-disc@mail.nasa.gov'
 ManagedBy: NASA
 UpdateFrequency: From 2014-03-08 to Ongoing
 Tags:

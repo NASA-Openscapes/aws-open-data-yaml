@@ -48,7 +48,9 @@ Description: "The MODIS/Terra Calibrated Radiances 5Min L1B Swath 500m data set 
   Science Team homepage at:\r\nhttps://modis.gsfc.nasa.gov/data/dataprod/\nRead our
   doc on how to get AWS Credentials to retrieve this data: https://data.laadsdaac.earthdatacloud.nasa.gov/s3credentialsREADME"
 Documentation: https://doi.org//10.5067/MODIS/MOD02HKM.061
-Contact: 'MODIS Characterization Support Team (MCST): https://mcst.gsfc.nasa.gov/contact'
+Contact: |-
+  MODIS Characterization Support Team (MCST): https://mcst.gsfc.nasa.gov/contact
+  MODAPS USER SUPPORT TEAM: MODAPSUSO@lists.nasa.gov
 ManagedBy: NASA
 UpdateFrequency: From 2000-02-24 to Ongoing
 Tags: aws-pds
