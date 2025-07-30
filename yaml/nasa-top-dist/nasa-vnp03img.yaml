@@ -12,7 +12,7 @@ License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/
 Resources:
   - Description: 'VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min
       L1 Swath 375 m . (Format: NetCDF-4)'
-    ARN: arn:aws:s3:::s3://prod-lads/VNP03IMG
+    ARN: arn:aws:s3:::prod-lads/VNP03IMG
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false

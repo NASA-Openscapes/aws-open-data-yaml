@@ -40,7 +40,7 @@ Resources:
   - Description: 'MERRA-2 inst3_3d_asm_Np: 3d,3-Hourly,Instantaneous,Pressure-Level,Assimilation,Assimilated
       Meteorological Fields 0.625 x 0.5 degree V5.12.4 (M2I3NPASM) at GES DISC. (Format:
       )'
-    ARN: arn:aws:s3:::s3://gesdisc-cumulus-prod-protected/MERRA2/M2I3NPASM.5.12.4/
+    ARN: arn:aws:s3:::gesdisc-cumulus-prod-protected/MERRA2/M2I3NPASM.5.12.4/
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false

@@ -37,7 +37,7 @@ License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/
 Resources:
   - Description: 'MODIS/Terra Net Evapotranspiration 8-Day L4 Global 500m SIN Grid
       V061. (Format: HDF-EOS2)'
-    ARN: arn:aws:s3:::s3://lp-prod-protected/MOD16A2.061
+    ARN: arn:aws:s3:::lp-prod-protected/MOD16A2.061
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false

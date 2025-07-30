@@ -189,7 +189,7 @@ get_resources <- function(umm) {
       ),
       ARN = paste0(
         "arn:aws:s3:::",
-        bucket
+        gsub("s3://", "", bucket)
       ),
       Region = umm$DirectDistributionInformation$Region,
       Type = "S3 Bucket",

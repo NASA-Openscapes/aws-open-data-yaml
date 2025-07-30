@@ -17,7 +17,7 @@ License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/
 Resources:
   - Description: 'AIRS/Aqua L1C Infrared (IR) resampled and corrected radiances V6.7
       (AIRICRAD) at GES DISC. (Format: )'
-    ARN: arn:aws:s3:::s3://gesdisc-cumulus-prod-protected/Aqua_AIRS_Level1/AIRICRAD.6.7/
+    ARN: arn:aws:s3:::gesdisc-cumulus-prod-protected/Aqua_AIRS_Level1/AIRICRAD.6.7/
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false

@@ -24,7 +24,7 @@ Tags: aws-pds
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'MODIS/Terra Geolocation Fields 5-Min L1A Swath 1km. (Format: HDF-EOS)'
-    ARN: arn:aws:s3:::s3://prod-lads/MOD03
+    ARN: arn:aws:s3:::prod-lads/MOD03
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false

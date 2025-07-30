@@ -36,7 +36,7 @@ License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/
 Resources:
   - Description: 'GPM IMERG Final Precipitation L3 Half Hourly 0.1 degree x 0.1 degree
       V07 (GPM_3IMERGHH) at GES DISC. (Format: )'
-    ARN: arn:aws:s3:::s3://gesdisc-cumulus-prod-protected/GPM_L3/GPM_3IMERGHH.07/
+    ARN: arn:aws:s3:::gesdisc-cumulus-prod-protected/GPM_L3/GPM_3IMERGHH.07/
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false

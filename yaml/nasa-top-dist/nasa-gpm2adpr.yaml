@@ -18,7 +18,7 @@ License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/
 Resources:
   - Description: 'GPM DPR Precipitation Profile L2A 1.5 hours 5 km V07 (GPM_2ADPR)
       at GES DISC. (Format: )'
-    ARN: arn:aws:s3:::s3://gesdisc-cumulus-prod-protected/GPM_L2/GPM_2ADPR.07/
+    ARN: arn:aws:s3:::gesdisc-cumulus-prod-protected/GPM_L2/GPM_2ADPR.07/
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false

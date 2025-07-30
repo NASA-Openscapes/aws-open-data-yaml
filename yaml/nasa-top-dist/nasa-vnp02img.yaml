@@ -10,7 +10,7 @@ Tags: aws-pds
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'VIIRS/NPP Imagery Resolution 6-Min L1B Swath 375 m. (Format: NetCDF-4)'
-    ARN: arn:aws:s3:::s3://prod-lads/VNP02IMG
+    ARN: arn:aws:s3:::prod-lads/VNP02IMG
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false

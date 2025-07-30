@@ -29,7 +29,7 @@ License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/
 Resources:
   - Description: 'MODIS/Aqua Surface Reflectance Daily L2G Global 250m SIN Grid V061.
       (Format: HDF-EOS2)'
-    ARN: arn:aws:s3:::s3://lp-prod-protected/MYD09GQ.061
+    ARN: arn:aws:s3:::lp-prod-protected/MYD09GQ.061
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
