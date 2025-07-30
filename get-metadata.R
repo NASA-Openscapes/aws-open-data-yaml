@@ -127,25 +127,23 @@ get_contact_info <- function(umm) {
 
   cgs <- map_chr(contact_groups, \(x) {
     group_name <- x[[1]]$GroupName
-    email <- safely(map_chr)(
-      x[[1]]$ContactInformation$ContactMechanisms,
-      \(y) y$Value[y$Type == "Email"]
+    email <- map_chr(
+      keep(x[[1]]$ContactInformation$ContactMechanisms, \(y) y$Type == "Email"),
+      "Value"
     )
 
     # url <- keep(
     #   x[[1]]$ContactInformation$RelatedUrls,
     #   \(y) y$URL[y$URLContentType == "DataContactURL"]
     # )
-    if (
-      !is.null(email$error) || length(email$result) == 0 || email$result == ""
-    ) {
+    if (is.null(email) || length(email) == 0 || email == "") {
       return("")
     }
 
     paste0(
       group_name,
       ": ",
-      email$result
+      email
       # ". ",
       # tools::toTitleCase(tolower(url$Type)),
       # ": ",
@@ -213,6 +211,10 @@ get_publications <- function(umm) {
   })
 }
 
+get_doi <- function(umm) {
+  paste0(umm$DOI$Authority %||% "https://doi.org", "/", umm$DOI$DOI)
+}
+
 write_nasa_aws_yaml <- function(shortname, tutorials_df, dir) {
   metadata <- get_metadata(shortname)
 
@@ -227,11 +229,11 @@ write_nasa_aws_yaml <- function(shortname, tutorials_df, dir) {
   yaml_data <- list(
     Name = umm$EntryTitle,
     Description = paste0(
-      umm$Abstract,
+      trimws(gsub("(\\n){2,}", "\n\n", umm$Abstract)),
       "\nRead our doc on how to get AWS Credentials to retrieve this data: ",
       umm$DirectDistributionInformation$S3CredentialsAPIDocumentationURL
     ),
-    Documentation = paste0(umm$DOI$Authority, "/", umm$DOI$DOI),
+    Documentation = get_doi(umm),
     Contact = get_contact_info(umm),
     ManagedBy = "NASA",
     UpdateFrequency = get_update_frequency(umm),
