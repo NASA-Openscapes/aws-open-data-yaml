@@ -1,0 +1,31 @@
+Name: MODIS/Terra Geolocation Fields 5-Min L1A Swath 1km
+Description: "The MODIS/Terra Geolocation Fields 5Min L1A Swath 1km are calculated
+  for each 1 km MODIS Instantaneous Field of Views (IFOV) for all orbits daily (in
+  Collection 6 and later, information is provided to claculate 500m geolocation fields).
+  \ The locations and ancillary information corresponds to the intersection of the
+  centers of each IFOV from 10 detectors in an ideal 1 km band on the Earth's surface.
+  A digital terrain model is used to model the Earth's surface. The main inputs are
+  the spacecraft attitude and orbit, the instrument telemetry and the digital elevation
+  model. The geolocation fields include geodetic Latitude, Longitude, surface height
+  above geoid, solar zenith and azimuth angles, satellite zenith and azimuth angles,
+  and a land/sea mask for each 1 km sample. Additional information is included in
+  the header to enable the calculation of the approximate location of the center of
+  the detectors of any of the 36 MODIS bands. This product is used as input by a large
+  number of subsequent MODIS products, particularly the products produced by the Land
+  team.\r\n\r\nThe short name for this product is MOD03. Each file is roughly 30 MB
+  in size, and the total data volume is approximately 8 GB/day.\r\n\r\nSee the MODIS
+  Science Team homepage for more data set\r\ninformation: https://modis.gsfc.nasa.gov/data/dataprod/\nRead
+  our doc on how to get AWS Credentials to retrieve this data: https://data.laadsdaac.earthdatacloud.nasa.gov/s3credentialsREADME"
+Documentation: https://doi.org//10.5067/MODIS/MOD03.061
+Contact: 'MODAPS USER SUPPORT TEAM: MODAPSUSO@lists.nasa.gov'
+ManagedBy: NASA
+UpdateFrequency: From 2000-02-23 to Ongoing
+Tags: aws-pds
+License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
+Resources:
+  - Description: 'MODIS/Terra Geolocation Fields 5-Min L1A Swath 1km. (Format: HDF-EOS)'
+    ARN: 'arn:aws:s3:::'
+    Region: us-west-2
+    Type: S3 Bucket
+    RequesterPays: false
+    ControlledAccess: https://data.laadsdaac.earthdatacloud.nasa.gov/s3credentialsREADME

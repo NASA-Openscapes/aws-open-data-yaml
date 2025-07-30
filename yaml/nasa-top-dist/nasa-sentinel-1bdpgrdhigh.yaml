@@ -1,0 +1,22 @@
+Name: SENTINEL-1B_DUAL_POL_GRD_HIGH_RES
+Description: |-
+  Sentinel-1B Dual-pol ground projected high and full resolution images
+  Read our doc on how to get AWS Credentials to retrieve this data: https://sentinel1.asf.alaska.edu/s3credentialsREADME
+Documentation: /
+ManagedBy: NASA
+UpdateFrequency: From 2016-04-25 to 2021-12-24
+Tags:
+  - agriculture
+  - aws-pds
+  - earthquakes
+  - land cover
+  - oceans
+  - surface water
+License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
+Resources:
+  - Description: 'SENTINEL-1B_DUAL_POL_GRD_HIGH_RES. (Format: )'
+    ARN: 'arn:aws:s3:::'
+    Region: us-west-2
+    Type: S3 Bucket
+    RequesterPays: false
+    ControlledAccess: https://sentinel1.asf.alaska.edu/s3credentialsREADME

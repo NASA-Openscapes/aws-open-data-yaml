@@ -4,21 +4,13 @@ library(yaml)
 library(googlesheets4)
 library(dplyr)
 library(slugify)
+library(readr)
 
 ######
 
-get_tutorials <- function(
-  shortname,
-  sheet = "https://docs.google.com/spreadsheets/d/1ZqlYRvoZnLZIl5eOJ2gGUuu5E9K_P2c446RPHJ4B06w",
-  email = "andy@openscapes.org"
-) {
-  gs4_auth(email = email)
-
-  tutorials <- read_sheet(
-    sheet,
-    col_names = TRUE
-  ) |>
-    filter(shortname == shortname) |>
+get_tutorials <- function(tutorials_df, shortname) {
+  tutorials <- tutorials_df |>
+    filter(.data$shortname == .env$shortname) |>
     select(-shortname)
 
   # Convert to a list of lists
@@ -27,8 +19,12 @@ get_tutorials <- function(
   # Remove any NA elements
   ret <- map(ret, \(x) {
     keep(x, \(x) !is.na(x))
-  })
+  }) |>
+    compact()
 
+  if (length(ret) == 0) {
+    return(NULL)
+  }
   ret
 }
 
@@ -44,7 +40,12 @@ get_metadata <- function(
     ) |>
     req_perform()
 
-  resp_body_json(resp)$items[[1]]
+  items <- resp_body_json(resp)$items
+  if (is.null(items) || length(items) == 0) {
+    warning(paste("No metadata found for shortname:", shortname), call. = FALSE)
+    return(NULL)
+  }
+  items[[1]]
 }
 
 get_update_frequency <- function(umm) {
@@ -74,11 +75,51 @@ get_update_frequency <- function(umm) {
 }
 
 get_tags <- function(umm) {
-  as.list(unique(unname(c(
+  tags <- unique(unname(c(
     "aws-pds",
-    trimws(unlist(umm$ScienceKeywords)),
-    trimws(unlist(umm$AncillaryKeywords))
-  ))))
+    trimws(unlist(strsplit(unlist(umm$ScienceKeywords) %||% "", ","))),
+    trimws(unlist(strsplit(unlist(umm$AncillaryKeywords) %||% "", ",")))
+  )))
+
+  aws_tags <- read_yaml(
+    "https://raw.githubusercontent.com/awslabs/open-data-registry/refs/heads/main/tags.yaml"
+  )
+
+  not_valid_tags <- setdiff(
+    tolower(tags),
+    tolower(aws_tags)
+  )
+
+  if (length(not_valid_tags) > 0) {
+    update_tag_counts(not_valid_tags, "unlisted_tags.csv")
+  }
+
+  aws_tags[tolower(aws_tags) %in% tolower(tags)]
+}
+
+update_tag_counts <- function(tags, csv_file) {
+  # Read existing CSV or create empty data frame if file doesn't exist
+  if (file.exists(csv_file)) {
+    tag_df <- read_csv(
+      csv_file,
+      col_types = cols(tag = col_character(), n = col_integer())
+    )
+  } else {
+    tag_df <- data.frame(tag = character(0), n = integer(0))
+  }
+
+  for (tag in tags) {
+    if (tag %in% tag_df$tag) {
+      # Increment existing tag count
+      tag_df$n[tag_df$tag == tag] <- tag_df$n[tag_df$tag == tag] + 1
+    } else {
+      # Add new tag with count of 1
+      tag_df <- bind_rows(tag_df, data.frame(tag = tag, n = 1L))
+    }
+  }
+
+  # Write updated data frame back to CSV
+  write_csv(tag_df, csv_file, append = FALSE)
 }
 
 get_contact_info <- function(umm) {
@@ -86,32 +127,35 @@ get_contact_info <- function(umm) {
 
   cgs <- map_chr(contact_groups, \(x) {
     group_name <- x[[1]]$GroupName
-
-    email <- map_chr(
+    email <- safely(map_chr)(
       x[[1]]$ContactInformation$ContactMechanisms,
       \(y) y$Value[y$Type == "Email"]
     )
 
-    url_type <- map_chr(
-      x[[1]]$ContactInformation$RelatedUrls,
-      \(y) y$Type[y$URLContentType == "DataContactURL"]
-    )
-
-    url <- map_chr(
-      x[[1]]$ContactInformation$RelatedUrls,
-      \(y) y$URL[y$URLContentType == "DataContactURL"]
-    )
+    # url <- keep(
+    #   x[[1]]$ContactInformation$RelatedUrls,
+    #   \(y) y$URL[y$URLContentType == "DataContactURL"]
+    # )
+    if (
+      !is.null(email$error) || length(email$result) == 0 || email$result == ""
+    ) {
+      return("")
+    }
 
     paste0(
       group_name,
       ": ",
-      email,
-      ". ",
-      tools::toTitleCase(tolower(url_type)),
-      ": ",
-      url
+      email$result
+      # ". ",
+      # tools::toTitleCase(tolower(url$Type)),
+      # ": ",
+      # url$Value
     )
   })
+
+  if (length(cgs) == 0) {
+    return(NULL)
+  }
   paste0(unique(cgs), collapse = "\n")
 }
 
@@ -169,39 +213,75 @@ get_publications <- function(umm) {
   })
 }
 
+write_nasa_aws_yaml <- function(shortname, tutorials_df, dir) {
+  metadata <- get_metadata(shortname)
+
+  if (is.null(metadata)) {
+    warning(paste("Skipping", shortname, "due to missing metadata."))
+    return(NULL)
+  }
+
+  meta <- metadata$meta
+  umm <- metadata$umm
+
+  yaml_data <- list(
+    Name = umm$EntryTitle,
+    Description = paste0(
+      umm$Abstract,
+      "\nRead our doc on how to get AWS Credentials to retrieve this data: ",
+      umm$DirectDistributionInformation$S3CredentialsAPIDocumentationURL
+    ),
+    Documentation = paste0(umm$DOI$Authority, "/", umm$DOI$DOI),
+    Contact = get_contact_info(umm),
+    ManagedBy = "NASA",
+    UpdateFrequency = get_update_frequency(umm),
+    Tags = get_tags(umm),
+    License = "[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)",
+    Resources = get_resources(umm),
+    ## Tutorials, publications
+    DataAtWork = compact(list(
+      Publications = get_publications(umm),
+      Tutorials = get_tutorials(tutorials_df, shortname)
+    ))
+  )
+
+  dir.create(dir, recursive = TRUE, showWarnings = FALSE)
+
+  yaml::write_yaml(
+    compact(yaml_data),
+    file = file.path(
+      dir,
+      paste0("nasa-", slugify(shortname), ".yaml")
+    ),
+    indent.mapping.sequence = TRUE,
+    handlers = list(logical = verbatim_logical, character = trimws)
+  )
+}
+
 ### Main script to fetch metadata and write YAML file
 
-shortname <- "MUR-JPL-L4-GLOB-v4.1"
+gs4_auth(email = "andy@openscapes.org")
 
-metadata <- get_metadata(shortname)
+tutorials_df <- read_sheet(
+  "https://docs.google.com/spreadsheets/d/1ZqlYRvoZnLZIl5eOJ2gGUuu5E9K_P2c446RPHJ4B06w",
+  col_names = TRUE
+)
 
-meta <- metadata$meta
-umm <- metadata$umm
+## One test
+write_nasa_aws_yaml(
+  "MUR-JPL-L4-GLOB-v4.1",
+  tutorials_df,
+  "yaml"
+)
 
-yaml_data <- list(
-  Name = umm$EntryTitle,
-  Description = paste0(
-    umm$Abstract,
-    "\nRead our doc on how to get AWS Credentials to retrieve this data: ",
-    umm$DirectDistributionInformation$S3CredentialsAPIDocumentationURL
-  ),
-  Documentation = paste0(umm$DOI$Authority, "/", umm$DOI$DOI),
-  Contact = get_contact_info(umm),
-  ManagedBy = "NASA",
-  UpdateFrequency = get_update_frequency(umm),
-  Tags = get_tags(umm),
-  License = "[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)",
-  Resources = get_resources(umm),
-  ## Tutorials, publications
-  DataAtWork = list(
-    Publications = get_publications(umm),
-    Tutorials = get_tutorials(shortname)
+## Top 50
+top_dist_datasets <- read_csv("top_dist.csv") |>
+  pull("Short Name")
+
+for (shortname in top_dist_datasets) {
+  write_nasa_aws_yaml(
+    shortname,
+    tutorials_df,
+    file.path("yaml", "nasa-top-dist")
   )
-)
-
-write_yaml(
-  yaml_data,
-  file = file.path("yaml", paste0("nasa-", slugify(shortname), ".yaml")),
-  indent.mapping.sequence = TRUE,
-  handlers = list(logical = verbatim_logical, character = trimws)
-)
+}

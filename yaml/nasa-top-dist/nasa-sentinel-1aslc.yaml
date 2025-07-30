@@ -1,0 +1,22 @@
+Name: SENTINEL-1A_SLC
+Description: |-
+  Sentinel-1A slant-range product
+  Read our doc on how to get AWS Credentials to retrieve this data: https://sentinel1.asf.alaska.edu/s3credentialsREADME
+Documentation: /
+ManagedBy: NASA
+UpdateFrequency: From 2014-04-03 to Ongoing
+Tags:
+  - agriculture
+  - aws-pds
+  - earthquakes
+  - land cover
+  - oceans
+  - surface water
+License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
+Resources:
+  - Description: 'SENTINEL-1A_SLC. (Format: )'
+    ARN: 'arn:aws:s3:::'
+    Region: us-west-2
+    Type: S3 Bucket
+    RequesterPays: false
+    ControlledAccess: https://sentinel1.asf.alaska.edu/s3credentialsREADME

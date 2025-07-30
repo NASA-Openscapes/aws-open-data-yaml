@@ -1,0 +1,16 @@
+Name: ATLAS/ICESat-2 L3A Land and Vegetation Height V006
+Description: |-
+  This data set (ATL08) contains along-track heights above the WGS84 ellipsoid (ITRF2014 reference frame) for the ground and canopy surfaces. The canopy and ground surfaces are processed in fixed 100 m data segments, which typically contain more than 100 signal photons. The data were acquired by the Advanced Topographic Laser Altimeter System (ATLAS) instrument on board the Ice, Cloud and land Elevation Satellite-2 (ICESat-2) observatory.
+  Read our doc on how to get AWS Credentials to retrieve this data: https://data.nsidc.earthdatacloud.nasa.gov/s3credentialsREADME
+Documentation: /10.5067/ATLAS/ATL08.006
+ManagedBy: NASA
+UpdateFrequency: From 2018-10-14 to Ongoing
+Tags: aws-pds
+License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
+Resources:
+  - Description: 'ATLAS/ICESat-2 L3A Land and Vegetation Height V006. (Format: HDF5)'
+    ARN: arn:aws:s3:::nsidc-cumulus-prod-protected/ATLAS/ATL08/006
+    Region: us-west-2
+    Type: S3 Bucket
+    RequesterPays: false
+    ControlledAccess: https://data.nsidc.earthdatacloud.nasa.gov/s3credentialsREADME
