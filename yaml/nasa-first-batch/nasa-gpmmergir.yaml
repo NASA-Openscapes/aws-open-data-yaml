@@ -24,14 +24,14 @@ Description: "These data originate from NOAA/NCEP.\n\nThe NOAA Climate Predictio
   when viewed along a slanted path. These corrections allow for the merging of the
   IR data from the various GEO-satellites with greatly reduced discontinuities at
   GEO-satellite data boundaries. In the event of duplicate data in a grid box, the
-  value with the smaller zenith angle is taken.\n\n\nThe NASA GES DISC is curating
-  these data in a self-documenting, CF-compliant, netCDF-4 format, which allows a
-  broad range of applications to access the data directly, without the need to cope
-  with the original binary data format. In addition to the direct download of netCDF-4
+  value with the smaller zenith angle is taken.\n\nThe NASA GES DISC is curating these
+  data in a self-documenting, CF-compliant, netCDF-4 format, which allows a broad
+  range of applications to access the data directly, without the need to cope with
+  the original binary data format. In addition to the direct download of netCDF-4
   data, the GES DISC provides data download in binary, ASCII, and netCDF-3 formats
-  using the OPeNDAP interface.\n\n\nSimilarities with the original\n-----------------------------\nAs
+  using the OPeNDAP interface.\n\nSimilarities with the original\n-----------------------------\nAs
   in the original binaries, every netCDF-4 file covers one hour, and contains two
-  half-hourly grids, at 4-km grid cell resolution. \n\n\nDifferences from the original\n-----------------------------\n1.
+  half-hourly grids, at 4-km grid cell resolution. \n\nDifferences from the original\n-----------------------------\n1.
   The data in the netCDF-4 files are already converted to real (float) values of Brightness
   Temperatures in Kelvin. There is no need to further scale these data. The netCDF-4
   format is machine-independent and users need not worry about the endian-ness of
@@ -42,7 +42,7 @@ Description: "These data originate from NOAA/NCEP.\n\nThe NOAA Climate Predictio
   (\"lon\"), latitude (\"lat\") and \"time\" vectors. Thus, any CF-compliant tool
   should automatically understand the setup in the data files and the starting time
   for each half-hourly grid. Even without such tools, simple \"ncdump\" or \"h5dump\"
-  command line tools will easily disclose the netCDF-4 files configuration.\n\n\nAcknowledgements\n------------------\nThe
+  command line tools will easily disclose the netCDF-4 files configuration.\n\nAcknowledgements\n------------------\nThe
   creation of the original data at NOAA/NCEP is supported by funding from the NOAA
   Office of Global Programs for the Global Precipitation Climatology Project (GPCP)
   and by NASA via the Tropical Rainfall Measuring Mission (TRMM). \n\nThe permanent

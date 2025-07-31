@@ -1,265 +1,288 @@
 tag,n
-earth science,43
-ocean temperature,1
-sea surface temperature,1
-foundation sea surface temperature,1
-ghrsst,1
-level 4,1
-sst,1
-surface temperature,5
-mur,1
-foundation sst,1
-sst anomaly,1
-anomaly,1
-forest science,4
-reforestation,4
-biosphere,7
-terrestrial ecosystems,5
-agricultural lands,4
-alpine/tundra,4
-beaches,4
-deserts,4
-dunes,4
-forests,5
-grasslands,5
-islands,4
-urban lands,4
-wetlands,4
-cryosphere,4
-frozen ground,4
-periglacial processes,4
-permafrost,4
-rock glaciers,4
-glaciers/ice sheets,4
-glacier elevation/ice sheet elevation,4
-glacier motion/ice sheet motion,4
-glacier thickness/ice sheet thickness,4
-glacier topography/ice sheet topography,4
-glaciers,4
-ice sheets,4
-icebergs,4
-sea ice,4
-ice deformation,4
-ice depth/thickness,4
-ice edges,4
-ice extent,4
-ice floes,4
-ice growth/melt,4
-ice roughness,4
-ice temperature,4
-ice types,4
-leads,4
-pack ice,4
-polynyas,4
-reflectance,16
-sea ice motion,4
-snow/ice,4
-ice motion,4
-ice velocity,4
-lake ice,4
-river ice,4
-snow cover,4
-land surface,18
-erosion/sedimentation,4
-landslides,4
-geomorphic landforms/processes,4
-aeolian landforms,4
-coastal landforms,4
-fluvial landforms,4
-glacial landforms,4
-karst landforms,4
-tectonic landforms,4
-land use/land cover,4
-land use/land cover classification,4
-landscape,4
-landscape ecology,4
-landscape patterns,4
-landscape processes,4
-topography,7
-landforms,4
-surface roughness,4
-terrain elevation,6
-topographic effects,4
-coastal processes,4
-barrier islands,4
-deltas,4
-estuaries,4
-fjords,4
-inlets,4
-lagoons,4
-mangroves,4
-marshes,4
-rocky coasts,4
-shorelines,4
-ocean waves,4
-wind waves,4
-ocean winds,4
-surface winds,7
-solid earth,5
-caldera,4
-cinder cone,4
-faults,4
-folds,4
-geyser,4
-graben,4
-horst,4
-lava dome,4
-lava plain,4
-maar,4
-mountains,4
-plateau,4
-ridge,4
-rift valley,4
-tuya,4
-volcano,4
-tectonics,4
-plate tectonics,4
-volcanic activity,4
-terrestrial hydrosphere,4
-surface radiative properties,11
-spectral/engineering,16
-infrared wavelengths,9
-infrared radiance,8
-reflected infrared,7
-visible wavelengths,8
-visible radiance,7
-national geospatial data asset,10
-ngda,10
-platform characteristics,2
-attitude characteristics,2
-orbital characteristics,2
-viewing geometry,3
-vegetation,3
-vegetation index,1
-normalized difference vegetation index (ndvi),1
-plant phenology,1
-canopy characteristics,2
-vegetation cover,1
-vegetation height,1
-atmospheric radiation,2
-atmospheric emitted radiation,2
-emissivity,2
-optical depth/thickness,2
-radiative flux,2
-transmittance,2
-clouds,5
-cloud microphysics,5
-cloud condensation nuclei,2
-cloud droplet concentration/size,2
-cloud liquid water/ice,5
-cloud optical depth/thickness,2
-cloud precipitable water,2
-cloud properties,4
-cloud asymmetry,2
-cloud ceiling,2
-cloud frequency,2
-cloud height,2
-cloud top pressure,3
-cloud top temperature,3
-cloud vertical distribution,2
-cloud radiative transfer,2
-cloud emissivity,2
-cloud radiative forcing,2
-cloud reflectance,2
-cloud types,2
-aerosols,3
-dust/ash/smoke,3
-atmospheric chemistry,6
-sulfur compounds,3
-sulfur dioxide,3
-dust flag,2
-dust score,2
-volcanic sulfur dioxide indicator,2
-carbonaceous aerosols,1
-organic particles,1
-sulfate particles,1
-sulfur oxides,1
-sulfate,1
-dimethyl sulfide,1
-aerosol particle properties,1
-particulate matter,1
-atmospheric pressure,5
-surface pressure,5
-pressure thickness,2
-atmospheric water vapor,6
-water vapor indicators,4
-humidity,4
-relative humidity,3
-sea salt,1
-black carbon,1
-air mass/density,1
-bedi,4
-agriculture and forestry,4
-disasters,4
-terrestrial and freshwater ecosystems,4
-human health,4
-ocean and coastal resources and ecosystems,4
-water resources,4
-bc,1
-dms,1
-so2,1
-so4,1
-oc,1
-om,1
-pom,1
-pm,1
-sulfur,1
-oxygen compounds,3
-atmospheric ozone,3
-sea level pressure,3
-atmospheric winds,3
-u/v wind components,3
-upper level winds,3
-wind dynamics,3
-vorticity,2
-potential vorticity,2
-vertical wind velocity/speed,3
-atmospheric temperature,4
-upper air temperature,3
-vertical profiles,2
-specific humidity,3
-altitude,3
-geopotential height,3
-ozone profiles,2
-ozone mixing ratio,2
-ozone profile,1
-cloud fraction,1
-o3,2
-anisotropy,3
-shrubland/scrub,1
-biomass,1
-deciduous vegetation,1
-evergreen vegetation,1
-lidar waveform,1
-sub-orbital data,1
-aboveground biomass density,1
-model estimates,1
-plant functional types (pfts),1
-geolocated laser footprints,1
-waveform relative height metrics,1
-gedi algorithm,1
-visible imagery,2
-water vapor processes,1
-precipitation profiles,1
-latent heat flux,1
-albedo,2
-geodetics,1
-coordinate reference system,1
-sensor characteristics,1
-precipitation amount,1
-precipitation rate,1
-solid precipitation,1
-snow,1
-liquid precipitation,1
-rain,1
-water vapor,1
-thermal infrared,1
-skin temperature,1
-dew point temperature,1
-ocean pressure,1
-total precipitable water,1
-boundary layer winds,1
-total ozone,1
-zero plane displacement height,1
-height,1
-column ozone,1
+earth science,107
+ocean temperature,2
+sea surface temperature,2
+foundation sea surface temperature,2
+ghrsst,2
+level 4,2
+sst,2
+surface temperature,10
+mur,2
+foundation sst,2
+sst anomaly,2
+anomaly,2
+forest science,8
+reforestation,8
+biosphere,14
+terrestrial ecosystems,10
+agricultural lands,8
+alpine/tundra,8
+beaches,8
+deserts,8
+dunes,8
+forests,10
+grasslands,10
+islands,8
+urban lands,8
+wetlands,8
+cryosphere,12
+frozen ground,8
+periglacial processes,8
+permafrost,8
+rock glaciers,8
+glaciers/ice sheets,12
+glacier elevation/ice sheet elevation,8
+glacier motion/ice sheet motion,8
+glacier thickness/ice sheet thickness,8
+glacier topography/ice sheet topography,8
+glaciers,8
+ice sheets,8
+icebergs,8
+sea ice,8
+ice deformation,8
+ice depth/thickness,8
+ice edges,8
+ice extent,8
+ice floes,8
+ice growth/melt,8
+ice roughness,8
+ice temperature,8
+ice types,8
+leads,8
+pack ice,8
+polynyas,8
+reflectance,32
+sea ice motion,8
+snow/ice,8
+ice motion,8
+ice velocity,8
+lake ice,8
+river ice,8
+snow cover,8
+land surface,44
+erosion/sedimentation,8
+landslides,8
+geomorphic landforms/processes,13
+aeolian landforms,8
+coastal landforms,8
+fluvial landforms,8
+glacial landforms,8
+karst landforms,8
+tectonic landforms,8
+land use/land cover,11
+land use/land cover classification,8
+landscape,8
+landscape ecology,8
+landscape patterns,8
+landscape processes,8
+topography,14
+landforms,8
+surface roughness,8
+terrain elevation,12
+topographic effects,8
+coastal processes,12
+barrier islands,8
+deltas,8
+estuaries,8
+fjords,8
+inlets,8
+lagoons,8
+mangroves,8
+marshes,8
+rocky coasts,8
+shorelines,8
+ocean waves,8
+wind waves,8
+ocean winds,8
+surface winds,14
+solid earth,15
+caldera,8
+cinder cone,8
+faults,8
+folds,8
+geyser,8
+graben,8
+horst,8
+lava dome,8
+lava plain,8
+maar,8
+mountains,8
+plateau,8
+ridge,8
+rift valley,8
+tuya,8
+volcano,8
+tectonics,13
+plate tectonics,8
+volcanic activity,8
+terrestrial hydrosphere,11
+surface radiative properties,22
+spectral/engineering,33
+infrared wavelengths,19
+infrared radiance,16
+reflected infrared,14
+visible wavelengths,16
+visible radiance,14
+national geospatial data asset,20
+ngda,20
+platform characteristics,4
+attitude characteristics,4
+orbital characteristics,4
+viewing geometry,6
+vegetation,6
+vegetation index,2
+normalized difference vegetation index (ndvi),2
+plant phenology,2
+canopy characteristics,4
+vegetation cover,2
+vegetation height,2
+atmospheric radiation,4
+atmospheric emitted radiation,4
+emissivity,4
+optical depth/thickness,4
+radiative flux,4
+transmittance,4
+clouds,10
+cloud microphysics,10
+cloud condensation nuclei,4
+cloud droplet concentration/size,4
+cloud liquid water/ice,10
+cloud optical depth/thickness,4
+cloud precipitable water,4
+cloud properties,8
+cloud asymmetry,4
+cloud ceiling,4
+cloud frequency,4
+cloud height,4
+cloud top pressure,6
+cloud top temperature,6
+cloud vertical distribution,4
+cloud radiative transfer,4
+cloud emissivity,4
+cloud radiative forcing,4
+cloud reflectance,4
+cloud types,4
+aerosols,6
+dust/ash/smoke,6
+atmospheric chemistry,12
+sulfur compounds,6
+sulfur dioxide,6
+dust flag,4
+dust score,4
+volcanic sulfur dioxide indicator,4
+carbonaceous aerosols,2
+organic particles,2
+sulfate particles,2
+sulfur oxides,2
+sulfate,2
+dimethyl sulfide,2
+aerosol particle properties,2
+particulate matter,2
+atmospheric pressure,10
+surface pressure,10
+pressure thickness,4
+atmospheric water vapor,12
+water vapor indicators,8
+humidity,8
+relative humidity,6
+sea salt,2
+black carbon,2
+air mass/density,2
+bedi,8
+agriculture and forestry,8
+disasters,8
+terrestrial and freshwater ecosystems,8
+human health,8
+ocean and coastal resources and ecosystems,8
+water resources,8
+bc,2
+dms,2
+so2,2
+so4,2
+oc,2
+om,2
+pom,2
+pm,2
+sulfur,2
+oxygen compounds,6
+atmospheric ozone,6
+sea level pressure,6
+atmospheric winds,6
+u/v wind components,6
+upper level winds,6
+wind dynamics,6
+vorticity,4
+potential vorticity,4
+vertical wind velocity/speed,6
+atmospheric temperature,8
+upper air temperature,6
+vertical profiles,4
+specific humidity,6
+altitude,6
+geopotential height,6
+ozone profiles,4
+ozone mixing ratio,4
+ozone profile,2
+cloud fraction,2
+o3,4
+anisotropy,6
+shrubland/scrub,2
+biomass,2
+deciduous vegetation,2
+evergreen vegetation,2
+lidar waveform,2
+sub-orbital data,2
+aboveground biomass density,2
+model estimates,2
+plant functional types (pfts),2
+geolocated laser footprints,2
+waveform relative height metrics,2
+gedi algorithm,2
+visible imagery,4
+water vapor processes,2
+precipitation profiles,2
+latent heat flux,2
+albedo,4
+geodetics,2
+coordinate reference system,2
+sensor characteristics,2
+precipitation amount,10
+precipitation rate,9
+solid precipitation,9
+snow,9
+liquid precipitation,10
+rain,10
+water vapor,2
+thermal infrared,2
+skin temperature,2
+dew point temperature,2
+ocean pressure,2
+total precipitable water,2
+boundary layer winds,2
+total ozone,2
+zero plane displacement height,2
+height,2
+column ozone,2
+surface water processes/measurements,2
+total surface water,2
+surface water extent,2
+water area,2
+dswx,2
+opera,2
+s1,1
+human dimensions,3
+environmental impacts,3
+mechanical disturbance,3
+disturbance,3
+hls,1
+harmonized landsat sentinel-2,1
+surface water features,1
+brightness temperature,1
+modeled precipitation data,1
+satellite precipitation,1
+bias correction,1
+high latitude,1
+hierarchical clustering,1
+rain gauges,1
+nasa above,1
+integrated multi-satellite retrievals for gpm (imerg),1
