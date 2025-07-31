@@ -24,7 +24,16 @@ Documentation: https://doi.org/10.5067/MODIS/MOD13Q1.061
 Contact: 'User Services: lpdaac@usgs.gov'
 ManagedBy: NASA
 UpdateFrequency: From 2000-02-18 to Ongoing (Weekly - < Monthly)
-Tags: aws-pds
+Tags:
+  - aws-pds
+  - datacenter
+  - earth observation
+  - geospatial
+  - global
+  - ice
+  - land
+  - opendap
+  - satellite imagery
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'MODIS/Terra Vegetation Indices 16-Day L3 Global 250m SIN Grid V061.
@@ -34,3 +43,9 @@ Resources:
     Type: S3 Bucket
     RequesterPays: false
     ControlledAccess: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentialsREADME
+DataAtWork:
+  Tutorials:
+    - Title: Download Files from S3 Using boto3
+      URL: https://github.com/nasa/LPDAAC-Data-Resources/blob/main/python/how-tos/Earthdata_Cloud__Download_file_from_S3.ipynb
+      AuthorName: LPDAAC
+      AuthorURL: https://www.earthdata.nasa.gov/centers/lp-daac

@@ -16,11 +16,20 @@ Description: "The MODIS/Terra Geolocation Fields 5Min L1A Swath 1km are calculat
   in size, and the total data volume is approximately 8 GB/day.\r\n\r\nSee the MODIS
   Science Team homepage for more data set\r\ninformation: https://modis.gsfc.nasa.gov/data/dataprod/\nRead
   our doc on how to get AWS Credentials to retrieve this data: https://data.laadsdaac.earthdatacloud.nasa.gov/s3credentialsREADME"
-Documentation: https://doi.org//10.5067/MODIS/MOD03.061
+Documentation: https://doi.org/10.5067/MODIS/MOD03.061
 Contact: 'MODAPS USER SUPPORT TEAM: MODAPSUSO@lists.nasa.gov'
 ManagedBy: NASA
 UpdateFrequency: From 2000-02-23 to Ongoing
-Tags: aws-pds
+Tags:
+  - aws-pds
+  - atmosphere
+  - datacenter
+  - earth observation
+  - global
+  - ice
+  - land
+  - opendap
+  - orbit
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'MODIS/Terra Geolocation Fields 5-Min L1A Swath 1km. (Format: HDF-EOS)'

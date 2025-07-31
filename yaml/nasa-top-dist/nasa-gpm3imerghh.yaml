@@ -28,14 +28,22 @@ Contact: 'GES DISC HELP DESK SUPPORT GROUP: gsfc-dl-help-disc@mail.nasa.gov'
 ManagedBy: NASA
 UpdateFrequency: From 1998-01-01 to Ongoing
 Tags:
-  - atmosphere
   - aws-pds
+  - atmosphere
+  - climate
+  - datacenter
+  - forecast
+  - global
   - hydrology
-  - precipitation
+  - land
+  - metadata
+  - opendap
+  - radar
+  - water
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'GPM IMERG Final Precipitation L3 Half Hourly 0.1 degree x 0.1 degree
-      V07 (GPM_3IMERGHH) at GES DISC. (Format: )'
+      V07 (GPM_3IMERGHH) at GES DISC. (Format: HDF5)'
     ARN: arn:aws:s3:::gesdisc-cumulus-prod-protected/GPM_L3/GPM_3IMERGHH.07/
     Region: us-west-2
     Type: S3 Bucket
@@ -51,8 +59,17 @@ DataAtWork:
       AuthorName: Huffman, G. J., R. F. Adler, D. T. Bolvin, G. Gu, E. J. Nelkin,
         K. P. Bowman, Y. Hong, E. F. Stocker, and D. B. Wolff
     - Title: Kalman Filter Based CMORPH
-      URL: 10.1175/JHM-D-11-022.1
+      URL: https://doi.org/10.1175/JHM-D-11-022.1
       AuthorName: Joyce, R. J., P. Xie, and J. E. Janowiak
     - Title: Calculation of Gridded Precipitation Data for the Global Land-Surface
         Using In-Situ Gauge Observations
       AuthorName: Rudolf, B., and U. Schneider
+  Tutorials:
+    - Title: How to Read IMERG Data Using Python
+      URL: https://github.com/nasa/gesdisc-tutorials/blob/main/notebooks/How_to_Read_IMERG_Data_Using_Python.ipynb
+      AuthorName: James Acker, Jerome Alfred, Helen Amos, Chris Battisto, Thomas Hearty, Alexis Hunzinger, Lena Iredell, Christoph Keller, Binita KC, Carlee Loeser, Ariana Louise, Kristan Morgan, Dieu My T. Nguyen, Dana Ostrenga, Xiaohua Pan, Kanan Patel, Brianna R. Pagán, Andrey Savtchenko, Elliot Sherman,
+                  Suhung Shen, Jian Su,Joseph Wysk, Rupesh Shrestha.
+    - Title: How to Access GES DISC Data Using Python
+      URL: https://github.com/nasa/gesdisc-tutorials/blob/main/notebooks/How_to_Access_GES_DISC_Data_Using_Python.ipynb
+      AuthorName: James Acker, Jerome Alfred, Helen Amos, Chris Battisto, Thomas Hearty, Alexis Hunzinger, Lena Iredell, Christoph Keller, Binita KC, Carlee Loeser, Ariana Louise, Kristan Morgan, Dieu My T. Nguyen, Dana Ostrenga, Xiaohua Pan, Kanan Patel, Brianna R. Pagán, Andrey Savtchenko, Elliot Sherman,
+                  Suhung Shen, Jian Su,Joseph Wysk, Rupesh Shrestha.
