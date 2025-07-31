@@ -25,20 +25,20 @@ Resources:
 DataAtWork:
   Publications:
     - Title: AIRS version 6.6 and version 7 level-1C products
-      URL: 10.1117/12.2529400
+      URL: https://doi.org/10.1117/12.2529400
       AuthorName: Evan M. Manning, L. Larrabee Strow, and Hartmut H. Aumann
     - Title: AIRS Level-1C and applications to cross-calibration with MODIS and CrIS
-      URL: 10.1117/12.2061967
+      URL: https://doi.org/10.1117/12.2061967
       AuthorName: Evan M. Manning, Hartmut H. Aumann, and Ali Behrangi
     - Title: Validation of the Atmospheric Infrared Sounder radiative transfer algorithm
-      URL: 10.1029/2005JD006146
+      URL: https://doi.org/10.1029/2005JD006146
       AuthorName: Strow, L.L, Hannon, S.E, De-Souza Machado, S., Motteler, H.E., and
         Tobin, D.C.
     - Title: Radiometric Stability Validation of 17 Years of AIRS Data Using Sea Surface
         Temperatures.
-      URL: 10.1029/2019GL085098
+      URL: https://doi.org/10.1029/2019GL085098
       AuthorName: Aumann, H.H. Brogerg, S.,Manning, E., and Pagaino, T.
     - Title: Updates to the absolute radiometric accuracy of the AIRS on Aqua
-      URL: 10.1117/12.2324605
+      URL: https://doi.org/10.1117/12.2324605
       AuthorName: Pagano, T.S., Aumann, H.H., Broberg, S., Manning, E., Overoye, K.,
         and Weiler, M.

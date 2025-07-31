@@ -208,9 +208,20 @@ get_publications <- function(umm) {
   }
 
   map(umm$PublicationReferences, \(pub) {
+    doi <- pub$DOI[[1]]
+    url <- if (!is.null(doi) && !grepl("^NASA/.+", doi)) {
+      if (!grepl("^https?://", doi)) {
+        paste0("https://doi.org/", doi)
+      } else {
+        doi
+      }
+    } else {
+      pub$URL
+    }
+
     compact(list(
       Title = pub$Title,
-      URL = pub$DOI[[1]] %||% pub$URL,
+      URL = url,
       AuthorName = pub$Author
     ))
   })
