@@ -22,7 +22,7 @@ Description: "The MOD16A2 Version 6.1 Evapotranspiration/Latent Heat Flux produc
   to adjust for the optical crosstalk in Terra MODIS infrared (IR) bands, and corrections
   to the Terra MODIS forward look-up table (LUT) update for the period 2012 - 2017.\n*
   A polarization correction has been applied to the L1B Reflective Solar Bands (RSB).\n*
-  The product uses Climatology LAI/FPAR as back up to the operational LAI/FPAR. \nRead
+  The product uses Climatology LAI/FPAR as back up to the operational LAI/FPAR.\nRead
   our doc on how to get AWS Credentials to retrieve this data: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentialsREADME"
 Documentation: https://doi.org/10.5067/MODIS/MOD16A2.061
 Contact: 'User Services: lpdaac@usgs.gov. Home Page: https://www.earthdata.nasa.gov/centers/lp-daac/contact'

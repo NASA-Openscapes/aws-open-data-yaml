@@ -17,7 +17,6 @@ Description: |-
 
   * Enhanced Geolocation Accuracy: Version 4 uses Collection 2 Ground Control Points (GCPs) compared against Global Land Survey (GLS) 2000 standards to improve positional accuracy.
   * Radiometric Calibration Update: Version 4 applies Radiometric Calibration Coefficient Version 5 (RCC V5) to improve the radiometric accuracy of the raw DNs, based on research by [Tsuchida and others (2020)](https://doi.org/10.3390/rs12030427), published in Remote Sensing.
-
   Read our doc on how to get AWS Credentials to retrieve this data: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentialsREADME
 Documentation: https://doi.org/10.5067/ASTER/AST_L1T.004
 Contact: 'User Services: lpdaac@usgs.gov. Home Page: https://www.earthdata.nasa.gov/centers/lp-daac/contact'

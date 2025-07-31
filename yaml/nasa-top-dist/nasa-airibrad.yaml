@@ -7,12 +7,10 @@ Description: |-
 
   Users of the L1b v5 product who are concerned that these shifts may impact their science investigations and applications are encouraged to switch to the AIRS L1c v6.7.4 product, which, among many other improvements, converts the spectra to a fixed frequency grid.          END OF WARNING.
 
-
-
   The Atmospheric Infrared Sounder (AIRS) is a grating spectrometer (R = 1200) aboard the second Earth Observing System (EOS) polar-orbiting platform, EOS Aqua. In combination with the Advanced Microwave Sounding Unit (AMSU) and the Humidity Sounder for Brazil (HSB), AIRS constitutes an innovative atmospheric sounding group of visible, infrared, and microwave sensors. The AIRS Infrared (IR) level 1B data set contains AIRS calibrated and geolocated radiances in milliWatts/m^2/cm^-1/steradian for 2378 infrared channels in the 3.74 to 15.4 micron region of t he spectrum. The AIRS instrument is co-aligned with AMSU-A so that successive blocks of 3 x 3 AIRS footprints are contained within one AMSU-A footprint. The AIRIBRAD_005 products are stored in files (often referred to as "granules") that contain 6 minutes of data, 90 footprints across track by 135 lines along track.
   Read our doc on how to get AWS Credentials to retrieve this data: https://data.gesdisc.earthdata.nasa.gov/s3credentialsREADME
-Documentation: /10.5067/YZEXEVN4JGGJ
-Contact: ''
+Documentation: https://doi.org/10.5067/YZEXEVN4JGGJ
+Contact: 'GES DISC HELP DESK SUPPORT GROUP: gsfc-dl-help-disc@mail.nasa.gov'
 ManagedBy: NASA
 UpdateFrequency: From 2002-08-30 to Ongoing
 Tags:
@@ -22,7 +20,7 @@ License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/
 Resources:
   - Description: 'AIRS/Aqua L1B Infrared (IR) geolocated and calibrated radiances
       V005 (AIRIBRAD) at GES DISC. (Format: )'
-    ARN: arn:aws:s3:::s3://gesdisc-cumulus-prod-protected/Aqua_AIRS_Level1/AIRIBRAD.005/
+    ARN: arn:aws:s3:::gesdisc-cumulus-prod-protected/Aqua_AIRS_Level1/AIRIBRAD.005/
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false

@@ -2,7 +2,7 @@ Name: SENTINEL-1B_SLC
 Description: |-
   Sentinel-1B slant-range product
   Read our doc on how to get AWS Credentials to retrieve this data: https://sentinel1.asf.alaska.edu/s3credentialsREADME
-Documentation: /
+Documentation: https://doi.org/
 ManagedBy: NASA
 UpdateFrequency: From 2016-04-25 to 2021-12-24
 Tags:

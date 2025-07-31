@@ -28,7 +28,7 @@ Description: |-
   * Modified file name to include segment number and dataset version.
   Read our doc on how to get AWS Credentials to retrieve this data: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentialsREADME
 Documentation: https://doi.org/10.5067/GEDI/GEDI02_A.002
-Contact: ''
+Contact: 'User Services: lpdaac@usgs.gov'
 ManagedBy: NASA
 UpdateFrequency: From 2019-04-04 to 2023-03-16 (Varies)
 Tags:
@@ -38,7 +38,7 @@ License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/
 Resources:
   - Description: 'GEDI L2A Elevation and Height Metrics Data Global Footprint Level
       V002. (Format: HDF5)'
-    ARN: arn:aws:s3:::s3://lp-prod-protected/GEDI02_A.002
+    ARN: arn:aws:s3:::lp-prod-protected/GEDI02_A.002
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false

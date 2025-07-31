@@ -21,7 +21,7 @@ Description: "The Terra Moderate Resolution Imaging Spectroradiometer (MODIS) Ve
   A polarization correction has been applied to the L1B Reflective Solar Bands (RSB).\nRead
   our doc on how to get AWS Credentials to retrieve this data: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentialsREADME"
 Documentation: https://doi.org/10.5067/MODIS/MOD13Q1.061
-Contact: ''
+Contact: 'User Services: lpdaac@usgs.gov'
 ManagedBy: NASA
 UpdateFrequency: From 2000-02-18 to Ongoing (Weekly - < Monthly)
 Tags: aws-pds
@@ -29,7 +29,7 @@ License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/
 Resources:
   - Description: 'MODIS/Terra Vegetation Indices 16-Day L3 Global 250m SIN Grid V061.
       (Format: HDF-EOS2)'
-    ARN: arn:aws:s3:::s3://lp-prod-protected/MOD13Q1.061
+    ARN: arn:aws:s3:::lp-prod-protected/MOD13Q1.061
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false

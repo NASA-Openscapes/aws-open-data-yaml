@@ -14,7 +14,6 @@ Description: |-
 
   * The Version 6.1 Level-1B (L1B) products have been improved by undergoing various calibration changes that include: changes to the response-versus-scan angle (RVS) approach that affects reflectance bands for Aqua and Terra MODIS, corrections to adjust for the optical crosstalk in Terra MODIS infrared (IR) bands, and corrections to the Terra MODIS forward look-up table (LUT) update for the period 2012 - 2017.
   * A polarization correction has been applied to the L1B Reflective Solar Bands (RSB).
-
   Read our doc on how to get AWS Credentials to retrieve this data: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentialsREADME
 Documentation: https://doi.org/10.5067/MODIS/MCD43A4.061
 Contact: 'User Services: lpdaac@usgs.gov. Home Page: https://www.earthdata.nasa.gov/centers/lp-daac/contact'
@@ -33,6 +32,7 @@ License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/
 Resources:
   - Description: 'MODIS/Terra+Aqua BRDF/Albedo Nadir BRDF-Adjusted Ref Daily L3 Global
       - 500m V061. (Format: HDF-EOS2)'
+    ARN: arn:aws:s3:::lp-prod-protected/MCD43A4.061
     ARN: arn:aws:s3:::lp-prod-protected/MCD43A4.061
     Region: us-west-2
     Type: S3 Bucket
