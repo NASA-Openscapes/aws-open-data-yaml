@@ -4,16 +4,27 @@ Description: |-
   The MODIS/Terra Atmospherically Corrected Surface Reflectance 5-Min L2 Swath 250m, 500m, 1km (MOD09) product is computed from the MODIS Level 1B land bands 1, 2, 3, 4, 5, 6, and 7 (centered at 648 nm, 858 nm, 470 nm, 555 nm, 1240 nm, 1640 nm, and 2130 nm, respectively). The product is an estimate of the surface spectral reflectance for each band as it would have been measured at ground level if there were no atmospheric scattering or absorption. The surface-reflectance product is the input for product generation for several land products: vegetation Indices (VIs), Bidirectional Reflectance Distribution Function (BRDF), thermal anomaly, snow/ice, and Fraction of Photosynthetically Active Radiation/Leaf Area Index (FPAR/LAI).
   Read our doc on how to get AWS Credentials to retrieve this data: https://data.laadsdaac.earthdatacloud.nasa.gov/s3credentialsREADME
 Documentation: https://doi.org//10.5067/MODIS/MOD09.061
-Contact: 'MODAPS USER SUPPORT TEAM: MODAPSUSO@lists.nasa.gov'
+Contact: 'MODAPS USER SUPPORT TEAM: MODAPSUSO@lists.nasa.gov. Home Page: https://ladsweb.modaps.eosdis.nasa.gov/'
 ManagedBy: NASA
 UpdateFrequency: From 2000-02-24 to Ongoing
-Tags: aws-pds
+Tags:
+  - aws-pds
+  - atmosphere
+  - datacenter
+  - earth observation
+  - global
+  - ice
+  - land
+  - opendap
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'MODIS/Terra Atmospherically Corrected Surface Reflectance 5-Min
       L2 Swath 250m, 500m, 1km. (Format: HDF-EOS)'
-    ARN: 'arn:aws:s3:::'
+    ARN: 'arn:aws:s3:::prod-lads/MOD09'
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
     ControlledAccess: https://data.laadsdaac.earthdatacloud.nasa.gov/s3credentialsREADME
+DataAtWork:
+  Publications: ~
+  Tutorials: ~

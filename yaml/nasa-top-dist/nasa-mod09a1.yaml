@@ -17,16 +17,29 @@ Description: "The  Moderate Resolution Imaging Spectroradiometer (MODIS) Terra M
   A polarization correction has been applied to the L1B Reflective Solar Bands (RSB).\nRead
   our doc on how to get AWS Credentials to retrieve this data: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentialsREADME"
 Documentation: https://doi.org/10.5067/MODIS/MOD09A1.061
-Contact: ''
+Contact: 'User Services: lpdaac@usgs.gov. Home Page: https://www.earthdata.nasa.gov/centers/lp-daac/contact'
 ManagedBy: NASA
 UpdateFrequency: From 2000-02-18 to Ongoing (Weekly - < Monthly)
-Tags: aws-pds
+Tags:
+  - aws-pds
+  - earth observation
+  - geospatial
+  - global
+  - land
+  - opendap
+  - satellite imagery
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'MODIS/Terra Surface Reflectance 8-Day L3 Global 500m SIN Grid V061.
       (Format: HDF-EOS2)'
-    ARN: arn:aws:s3:::s3://lp-prod-protected/MOD09A1.061
+    ARN: arn:aws:s3:::lp-prod-protected/MOD09A1.061
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
     ControlledAccess: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentialsREADME
+DataAtWork:
+  Publications: ~
+  Tutorials:
+   - Title: Download Files from S3 Using boto3
+     URL: https://github.com/nasa/LPDAAC-Data-Resources/blob/7f58ad3abeca7f0d17637ddb812642c0120a57ab/python/how-tos/Earthdata_Cloud__Download_file_from_S3.ipynb
+     AuthorName: LPDAAC

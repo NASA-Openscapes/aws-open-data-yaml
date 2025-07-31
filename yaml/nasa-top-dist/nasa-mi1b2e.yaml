@@ -15,17 +15,28 @@ Description: "MI1B2E_004 is the Multi-angle Imaging SpectroRadiometer (MISR) Lev
   canopy structure.\nRead our doc on how to get AWS Credentials to retrieve this data:
   https://data.asdc.earthdata.nasa.gov/s3credentialsREADME"
 Documentation: https://doi.org/10.5067/TERRA/MISR/MI1B2E_L1.004
-Contact: ''
+Contact: 'ASDC USER SERVICES: support-asdc@earthdata.nasa.gov. Home Page: https://asdc.larc.nasa.gov/'
 ManagedBy: NASA
 UpdateFrequency: From 1999-12-18 to Ongoing
 Tags:
-  - atmosphere
   - aws-pds
+  - atmosphere
+  - climate
+  - cyclone typhoon hurricane
+  - datacenter
+  - earth observation
+  - global
+  - land
+  - opendap
+  - orbit
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'MISR Level 1B2 Ellipsoid Data V004. (Format: netCDF-4)'
-    ARN: arn:aws:s3:::s3://asdc-prod-protected/MISR/MI1B2E_004
+    ARN: arn:aws:s3:::asdc-prod-protected/MISR/MI1B2E_004
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
     ControlledAccess: https://data.asdc.earthdata.nasa.gov/s3credentialsREADME
+DataAtWork:
+  Publications: ~
+  Tutorials: ~

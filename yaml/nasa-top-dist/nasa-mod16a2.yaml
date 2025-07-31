@@ -25,20 +25,32 @@ Description: "The MOD16A2 Version 6.1 Evapotranspiration/Latent Heat Flux produc
   The product uses Climatology LAI/FPAR as back up to the operational LAI/FPAR. \nRead
   our doc on how to get AWS Credentials to retrieve this data: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentialsREADME"
 Documentation: https://doi.org/10.5067/MODIS/MOD16A2.061
-Contact: ''
+Contact: 'User Services: lpdaac@usgs.gov. Home Page: https://www.earthdata.nasa.gov/centers/lp-daac/contact'
 ManagedBy: NASA
 UpdateFrequency: From 2021-01-01 to Ongoing (Weekly - < Monthly)
 Tags:
-  - atmosphere
   - aws-pds
+  - atmosphere
+  - earth observation
   - evapotranspiration
-  - precipitation
+  - geospatial
+  - global
+  - land
+  - land cover
+  - opendap
+  - water
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'MODIS/Terra Net Evapotranspiration 8-Day L4 Global 500m SIN Grid
       V061. (Format: HDF-EOS2)'
-    ARN: arn:aws:s3:::s3://lp-prod-protected/MOD16A2.061
+    ARN: arn:aws:s3:::lp-prod-protected/MOD16A2.061
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
     ControlledAccess: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentialsREADME
+DataAtWork:
+  Publications: ~
+  Tutorials:
+   - Title: Download Files from S3 Using boto3
+     URL: https://github.com/nasa/LPDAAC-Data-Resources/blob/7f58ad3abeca7f0d17637ddb812642c0120a57ab/python/how-tos/Earthdata_Cloud__Download_file_from_S3.ipynb
+     AuthorName: LPDAAC

@@ -4,15 +4,24 @@ Description: |-
   The VIIRS/NPP Imagery Resolution Terrain-Corrected Geolocation 6-Min L1 Swath 375m, short-name VNP03IMG, product contains the derived line-of-sight (LOS) vectors for each of the 375-m image-resolution or I-bands.  The geolocation algorithm uses a number of inputs that include an Earth ellipsoid, geoid, and a digital terrain model along with the SNPP platform’s ephemeris and attitude data, and knowledge of the VIIRS sensor and satellite geometry.  It produces geodetic coordinates (latitude and longitude), and related parameters for each VIIRS L1 pixel.  The VNP03IMG product includes geodetic latitude, longitude, surface height above the geoid, solar zenith and azimuth angles, sensor zenith and azimuth angles, land/water mask, and quality flag for every pixel location.
   Read our doc on how to get AWS Credentials to retrieve this data: https://data.laadsdaac.earthdatacloud.nasa.gov/s3credentialsREADME
 Documentation: https://doi.org//10.5067/VIIRS/VNP03IMG.002
-Contact: 'MODAPS USER SUPPORT TEAM: MODAPSUSO@lists.nasa.gov'
+Contact: 'MODAPS USER SUPPORT TEAM: MODAPSUSO@lists.nasa.gov. Home Page: https://ladsweb.modaps.eosdis.nasa.gov/'
 ManagedBy: NASA
 UpdateFrequency: From 2012-01-19 to Ongoing
-Tags: aws-pds
+Tags:
+  - aws-pds
+  - atmosphere
+  - datacenter
+  - earth observation
+  - global
+  - land
+  - opendap
+  - orbit
+  - water
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'VIIRS/NPP Imagery Resolution Terrain Corrected Geolocation 6-Min
       L1 Swath 375 m . (Format: NetCDF-4)'
-    ARN: 'arn:aws:s3:::'
+    ARN: 'arn:aws:s3:::prod-lads/VNP03IMG'
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
@@ -20,6 +29,7 @@ Resources:
 DataAtWork:
   Publications:
     - Title: Suomi NPP VIIRS prelaunch and on-orbit geometric calibration and characterization
-      URL: 10.1002/jgrd.50873
+      URL: https://doi.org/10.1002/jgrd.50873
       AuthorName: Wolfe, R. E., G. Lin, M. Nishihama, K. P. Tewari, J. C. Tilton,
         and A. R. Isaacman
+  Tutorials:
