@@ -8,7 +8,15 @@ ManagedBy: NASA
 UpdateFrequency: From 2002-05-31 to Ongoing (Hourly - < Daily)
 Tags:
   - aws-pds
+  - datacenter
+  - earth observation
+  - global
+  - ice
+  - metadata
   - oceans
+  - parquet
+  - us
+  - water
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'GHRSST Level 4 MUR Global Foundation Sea Surface Temperature Analysis

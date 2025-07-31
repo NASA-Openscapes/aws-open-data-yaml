@@ -30,18 +30,27 @@ Description: "The MODIS/Terra Calibrated Radiances 5-Min L1B Swath 250m data set
   Support Team webpage for more C6.1 product information at:\r\n\r\nhttp://mcst.gsfc.nasa.gov/l1b/product-information\r\n\r\n\r\nor
   visit Science Team homepage at: \r\nhttp://modis.gsfc.nasa.gov/data/dataprod/\nRead
   our doc on how to get AWS Credentials to retrieve this data: https://data.laadsdaac.earthdatacloud.nasa.gov/s3credentialsREADME"
-Documentation: https://doi.org//10.5067/MODIS/MYD02QKM.061
-Contact: |-
-  MODIS Characterization Support Team (MCST): http://mcst.gsfc.nasa.gov/contact
-  MODAPS USER SUPPORT TEAM: MODAPSUSO@lists.nasa.gov
+Documentation: https://doi.org/10.5067/MODIS/MYD02QKM.061
+Contact: 'MODAPS USER SUPPORT TEAM: MODAPSUSO@lists.nasa.gov. Home Page: https://modaps.modaps.eosdis.nasa.gov/, MODIS Characterization Support Team (MCST): https://mcst.gsfc.nasa.gov/contact'
 ManagedBy: NASA
 UpdateFrequency: From 2002-07-04 to Ongoing
-Tags: aws-pds
+Tags:
+  - aws-pds
+  - atmosphere
+  - datacenter
+  - earth observation
+  - environmental
+  - global
+  - opendap
+  - orbit
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'MODIS/Aqua Calibrated Radiances 5-Min L1B Swath 250m. (Format: HDF-EOS)'
-    ARN: arn:aws:s3:::prod-lads/MYD02QKM
+    ARN: 'arn:aws:s3:::prod-lads/MYD02QKM'
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
     ControlledAccess: https://data.laadsdaac.earthdatacloud.nasa.gov/s3credentialsREADME
+DataAtWork:
+  Publications: ~
+  Tutorials: ~
