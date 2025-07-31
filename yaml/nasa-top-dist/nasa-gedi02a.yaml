@@ -33,7 +33,20 @@ ManagedBy: NASA
 UpdateFrequency: From 2019-04-04 to 2023-03-16 (Varies)
 Tags:
   - aws-pds
+  - biodiversity
+  - carbon
+  - datacenter
+  - earth observation
+  - energy
+  - global
+  - ice
+  - land
+  - land cover
   - lidar
+  - metadata
+  - orbit
+  - urban
+  - water
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'GEDI L2A Elevation and Height Metrics Data Global Footprint Level
@@ -43,3 +56,13 @@ Resources:
     Type: S3 Bucket
     RequesterPays: false
     ControlledAccess: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentialsREADME
+DataAtWork:
+  Tutorials:
+    - Title: 'How to: Find and Access GEDI Data'
+      URL: https://github.com/nasa/GEDI-Data-Resources/blob/main/python/tutorials/how-to-find-and-access-GEDI-data_earthaccess.ipynb
+      AuthorName: Land Processes Distributed Active Archive Center (LP DAAC)
+      AuthorURL: https://lpdaac.usgs.gov/
+    - Title: Getting Started with GEDI L2A Version 2 Data in Python
+      URL: https://github.com/nasa/GEDI-Data-Resources/blob/main/python/tutorials/GEDI_L2A_V2_Tutorial.ipynb
+      AuthorName: Land Processes Distributed Active Archive Center (LP DAAC)
+      AuthorURL: https://lpdaac.usgs.gov/

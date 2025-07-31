@@ -3,13 +3,17 @@ Name: OPERA Dynamic Surface Water Extent from Sentinel-1 CalVal Database (Versio
 Description: |-
   This dataset contains the calibration/validation (CalVal) database for the OPERA DSWx-S1 product. The CalVal database is a zip file of an Amazon Web Services S3 bucket containing classification items that enable algorithm calibration and validation of OPERA products. The CalVal database contains a Reference Document that further describes the structure and usage of the database, as well as a Validation Results document. Example notebooks demonstrating how to read the database tables, query for specific items, and download corresponding data files are available through the CalVal GitHub repository here: https://github.com/OPERA-Cal-Val/calval-database
   Read our doc on how to get AWS Credentials to retrieve this data: https://archive.podaac.earthdata.nasa.gov/s3credentialsREADME
-Documentation: https://doi.org//10.5067/OPDSW-S1-CVV1
-Contact: 'Help Desk: podaac@podaac.jpl.nasa.gov'
+Documentation: https://doi.org/10.5067/OPDSW-S1-CVV1
+Contact: 'Help Desk: podaac@podaac.jpl.nasa.gov. Home Page: https://podaac.jpl.nasa.gov/'
 ManagedBy: NASA
 UpdateFrequency: From 2021-09-01 to 2021-10-31
 Tags:
   - aws-pds
+  - datacenter
+  - earth observation
+  - sentinel-1
   - surface water
+  - water
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'OPERA Dynamic Surface Water Extent from Sentinel-1 CalVal Database
@@ -19,3 +23,9 @@ Resources:
     Type: S3 Bucket
     RequesterPays: false
     ControlledAccess: https://archive.podaac.earthdata.nasa.gov/s3credentialsREADME
+DataAtWork:
+  Tutorials:
+    - Title: Working with OPERA Dynamic Surface Water Extent (DSWx) Data
+      URL: https://podaac.github.io/tutorials/notebooks/datasets/OPERA_GIS_Cloud.html
+      AuthorName: Nicholas Tarpinian
+      NotebookURL: https://github.com/podaac/tutorials/blob/master/notebooks/datasets/OPERA_GIS_Cloud.ipynb
