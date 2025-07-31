@@ -23,6 +23,7 @@ Description: |-
 
   Briefly describing the Final Run, the input precipitation estimates computed from the various satellite passive microwave sensors are intercalibrated to the CORRA product (because it is presumed to be the best snapshot TRMM/GPM estimate after adjustment to the monthly GPCP SG), then "forward/backward morphed" and combined with microwave precipitation-calibrated geo-IR fields, and adjusted with seasonal GPCP SG surface precipitation data to provide half-hourly and monthly precipitation estimates on a 0.1°x0.1° (roughly 10x10 km) grid over the globe. Precipitation phase is a diagnostic variable computed using analyses of surface temperature, humidity, and pressure. The current period of record is June 2000 to the present (delayed by about 4 months).
   Read our doc on how to get AWS Credentials to retrieve this data: https://data.gesdisc.earthdata.nasa.gov/s3credentialsREADME
+Documentation: https://doi.org/10.5067/GPM/IMERG/3B-MONTH/07
 Contact: 'GES DISC HELP DESK SUPPORT GROUP: gsfc-dl-help-disc@mail.nasa.gov. Home Page: https://disc.gsfc.nasa.gov/'
 ManagedBy: NASA
 UpdateFrequency: From 1998-01-01 to Ongoing
