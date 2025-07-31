@@ -24,22 +24,31 @@ Description: "M2T1NXSLV (or  tavg1_2d_slv_Nx) is an hourly time-averaged 2-dimen
   or email the GES DISC Help Desk (gsfc-dl-help-disc@mail.nasa.gov).\nRead our doc
   on how to get AWS Credentials to retrieve this data: https://data.gesdisc.earthdata.nasa.gov/s3credentialsREADME"
 Documentation: https://doi.org/10.5067/VJAFPLI1CSIV
-Contact: 'GES DISC HELP DESK SUPPORT GROUP: gsfc-dl-help-disc@mail.nasa.gov'
+Contact: 'GES DISC HELP DESK SUPPORT GROUP: gsfc-dl-help-disc@mail.nasa.gov. Home Page: https://disc.gsfc.nasa.gov/, GLOBAL MODELING AND ASSIMILATION OFFICE: data@gmao.gsfc.nasa.gov'
 ManagedBy: NASA
 UpdateFrequency: From 1980-01-01 to Ongoing
 Tags:
+  - aws-pds
+  - agriculture
   - air temperature
   - atmosphere
-  - aws-pds
   - biodiversity
   - climate
+  - coastal
+  - datacenter
+  - ecosystems
+  - global
+  - hydrology
+  - ice
+  - land
+  - metadata
   - oceans
-  - transportation
-  - weather
+  - opendap
+  - water
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'MERRA-2 tavg1_2d_slv_Nx: 2d,1-Hourly,Time-Averaged,Single-Level,Assimilation,Single-Level
-      Diagnostics 0.625 x 0.5 degree V5.12.4 (M2T1NXSLV) at GES DISC. (Format: )'
+      Diagnostics 0.625 x 0.5 degree V5.12.4 (M2T1NXSLV) at GES DISC. (Format: netCDF)'
     ARN: arn:aws:s3:::gesdisc-cumulus-prod-protected/MERRA2/M2T1NXSLV.5.12.4/
     Region: us-west-2
     Type: S3 Bucket
@@ -104,3 +113,12 @@ DataAtWork:
       AuthorName: Purser, R. J., W.-S. Wu, D. F. Parrish, and N. M. Roberts
     - Title: Three-dimensional variational analysis with spatially inhomogeneous covariances
       AuthorName: Wu, W.-S., R.J. Purser and D.F. Parrish
+  Tutorials: 
+    - Title: How to Read and Plot NetCDF MERRA-2 Data in Python
+      URL: https://github.com/nasa/gesdisc-tutorials/blob/main/notebooks/How_to_Read_and_Plot_NetCDF_MERRA-2_data_in_Python.ipynb
+      AuthorName: James Acker, Jerome Alfred, Helen Amos, Chris Battisto, Thomas Hearty, Alexis Hunzinger, Lena Iredell, Christoph Keller, Binita KC, Carlee Loeser, Ariana Louise, Kristan Morgan, Dieu My T. Nguyen, Dana Ostrenga, Xiaohua Pan, Kanan Patel, Brianna R. Pagán, Andrey Savtchenko, Elliot Sherman,  
+                  Suhung Shen, Jian Su,Joseph Wysk, Rupesh Shrestha.
+    - Title: How to Access GES DISC Data Using Python
+      URL: https://github.com/nasa/gesdisc-tutorials/blob/main/notebooks/How_to_Access_GES_DISC_Data_Using_Python.ipynb
+      AuthorName: James Acker, Jerome Alfred, Helen Amos, Chris Battisto, Thomas Hearty, Alexis Hunzinger, Lena Iredell, Christoph Keller, Binita KC, Carlee Loeser, Ariana Louise, Kristan Morgan, Dieu My T. Nguyen, Dana Ostrenga, Xiaohua Pan, Kanan Patel, Brianna R. Pagán, Andrey Savtchenko, Elliot Sherman,  
+                  Suhung Shen, Jian Su,Joseph Wysk, Rupesh Shrestha.

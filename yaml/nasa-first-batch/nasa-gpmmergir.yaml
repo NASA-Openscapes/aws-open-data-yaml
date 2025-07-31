@@ -47,21 +47,34 @@ Description: "These data originate from NOAA/NCEP.\n\nThe NOAA Climate Predictio
   Office of Global Programs for the Global Precipitation Climatology Project (GPCP)
   and by NASA via the Tropical Rainfall Measuring Mission (TRMM). \n\nThe permanent
   archive at GES DISC is supported by NASA's HQ Earth Science Data Systems (ESDS)
-  Program.\nRead our doc on how to get AWS Credentials to retrieve this data: https://data.gesdisc.earthdata.nasa.gov/s3credentialsREADME"
+  Program. \n\n\n\nRead our doc on how to get AWS Credentials to retrieve this data:
+  https://data.gesdisc.earthdata.nasa.gov/s3credentialsREADME"
 Documentation: https://doi.org/10.5067/P4HZB9N27EKU
-Contact: 'GES DISC HELP DESK SUPPORT GROUP: gsfc-dl-help-disc@mail.nasa.gov'
+Contact: 'GES DISC HELP DESK SUPPORT GROUP: gsfc-dl-help-disc@mail.nasa.gov. Home Page: https://disc.gsfc.nasa.gov/'
 ManagedBy: NASA
 UpdateFrequency: From 1998-01-01 to Ongoing
 Tags:
-  - atmosphere
   - aws-pds
-  - precipitation
+  - atmosphere
+  - climate
+  - datacenter
+  - forecast
+  - global
+  - metadata
+  - opendap
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'NCEP/CPC L3 Half Hourly 4km Global (60S - 60N) Merged IR V1 (GPM_MERGIR)
-      at GES DISC. (Format: )'
+      at GES DISC. (Format: netCDF)'
     ARN: arn:aws:s3:::gesdisc-cumulus-prod-protected/MERGED_IR/GPM_MERGIR.1/
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
     ControlledAccess: https://data.gesdisc.earthdata.nasa.gov/s3credentialsREADME
+DataAtWork:
+  Publications: ~
+  Tutorials: 
+   - Title: How to Access GES DISC Data Using Python
+     URL: https://github.com/nasa/gesdisc-tutorials/blob/main/notebooks/How_to_Access_GES_DISC_Data_Using_Python.ipynb
+     AuthorName: James Acker, Jerome Alfred, Helen Amos, Chris Battisto, Thomas Hearty, Alexis Hunzinger, Lena Iredell, Christoph Keller, Binita KC, Carlee Loeser, Ariana Louise, Kristan Morgan, Dieu My T. Nguyen, Dana Ostrenga, Xiaohua Pan, Kanan Patel, Brianna R. Pagán, Andrey Savtchenko, Elliot Sherman,  
+                  Suhung Shen, Jian Su,Joseph Wysk, Rupesh Shrestha.

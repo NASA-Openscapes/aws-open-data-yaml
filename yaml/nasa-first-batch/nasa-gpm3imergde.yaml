@@ -62,21 +62,27 @@ Description: "Version 07 is the current version of the data set. Older versions 
   half-hourly input, \"randomError\", (mm/hr)\nPerr_daily\t- Magnitude of the daily
   error, (mm/day)\nNcnt_err\t\t- Number of valid half-hour error estimates\n\nAgain,
   the sum of squared \"randomError\" can be reconstructed, and other estimates can
-  be derived using the available counts in the Daily files.\nRead our doc on how to
-  get AWS Credentials to retrieve this data: https://data.gesdisc.earthdata.nasa.gov/s3credentialsREADME"
+  be derived using the available counts in the Daily files.\n\n\nRead our doc on how
+  to get AWS Credentials to retrieve this data: https://data.gesdisc.earthdata.nasa.gov/s3credentialsREADME"
 Documentation: https://doi.org/10.5067/GPM/IMERGDE/DAY/07
-Contact: 'GES DISC HELP DESK SUPPORT GROUP: gsfc-dl-help-disc@mail.nasa.gov'
+Contact: 'GES DISC HELP DESK SUPPORT GROUP: gsfc-dl-help-disc@mail.nasa.gov. Home Page: https://disc.gsfc.nasa.gov/'
 ManagedBy: NASA
 UpdateFrequency: From 1998-01-01 to Ongoing
 Tags:
-  - atmosphere
   - aws-pds
+  - atmosphere
+  - climate
+  - coastal
+  - datacenter
+  - global
   - hydrology
-  - precipitation
+  - land
+  - metadata
+  - opendap
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'GPM IMERG Early Precipitation L3 1 day 0.1 degree x 0.1 degree V07
-      (GPM_3IMERGDE) at GES DISC. (Format: )'
+      (GPM_3IMERGDE) at GES DISC. (Format: netCDF)'
     ARN: arn:aws:s3:::gesdisc-cumulus-prod-protected/GPM_L3/GPM_3IMERGDE.07/
     Region: us-west-2
     Type: S3 Bucket
@@ -97,3 +103,8 @@ DataAtWork:
     - Title: Calculation of Gridded Precipitation Data for the Global Land-Surface
         Using In-Situ Gauge Observations
       AuthorName: Rudolf, B., and U. Schneider
+  Tutorials: 
+   - Title: How to Access GES DISC Data Using Python
+     URL: https://github.com/nasa/gesdisc-tutorials/blob/main/notebooks/How_to_Access_GES_DISC_Data_Using_Python.ipynb
+     AuthorName: James Acker, Jerome Alfred, Helen Amos, Chris Battisto, Thomas Hearty, Alexis Hunzinger, Lena Iredell, Christoph Keller, Binita KC, Carlee Loeser, Ariana Louise, Kristan Morgan, Dieu My T. Nguyen, Dana Ostrenga, Xiaohua Pan, Kanan Patel, Brianna R. Pagán, Andrey Savtchenko, Elliot Sherman,  
+                  Suhung Shen, Jian Su,Joseph Wysk, Rupesh Shrestha.
