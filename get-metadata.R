@@ -35,6 +35,7 @@ get_metadata <- function(
   resp <- request(base_url) |>
     req_url_query(
       short_name = shortname,
+      "options[short_name][ignore_case]" = TRUE,
       page_size = 1,
       cloud_hosted = TRUE
     ) |>
@@ -207,9 +208,20 @@ get_publications <- function(umm) {
   }
 
   map(umm$PublicationReferences, \(pub) {
+    doi <- pub$DOI[[1]]
+    url <- if (!is.null(doi) && !grepl("^NASA/.+", doi)) {
+      if (!grepl("^https?://", doi)) {
+        paste0("https://doi.org/", doi)
+      } else {
+        doi
+      }
+    } else {
+      pub$URL
+    }
+
     compact(list(
       Title = pub$Title,
-      URL = pub$DOI[[1]] %||% pub$URL,
+      URL = url,
       AuthorName = pub$Author
     ))
   })
@@ -289,5 +301,17 @@ for (shortname in top_dist_datasets) {
     shortname,
     tutorials_df,
     file.path("yaml", "nasa-top-dist")
+  )
+}
+
+## First batch from NASA
+first_batch <- read_csv("first_batch.csv") |>
+  pull("Short Name")
+
+for (shortname in first_batch) {
+  write_nasa_aws_yaml(
+    shortname,
+    tutorials_df,
+    file.path("yaml", "nasa-first-batch")
   )
 }

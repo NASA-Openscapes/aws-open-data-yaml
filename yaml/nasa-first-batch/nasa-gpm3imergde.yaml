@@ -39,7 +39,7 @@ Description: "Version 07 is the current version of the data set. Older versions 
   of minutes after the last granule of GPM_3IMERGHHE for the UTC data day is received
   at GES DISC. Since the target latency of GPM_3IMERGHHE is 4 hours, the daily should
   appear about 4 hours after the closure of the UTC day. For information on the original
-  data (GPM_3IMERGHHE), please see the Documentation (Related URL). \n\n\nThe daily
+  data (GPM_3IMERGHHE), please see the Documentation (Related URL). \n\nThe daily
   mean rate (mm/day) is derived by first computing the mean precipitation rate (mm/hour)
   in a grid cell for the data day, and then multiplying the result by 24.  Thus, for
   every grid cell we have                \n\nPdaily_mean     = SUM{Pi * 1[Pi valid]}

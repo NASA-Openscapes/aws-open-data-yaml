@@ -1,0 +1,30 @@
+Short Name,Version,Entry Title,Processing Level,Platform
+OPERA_L3_DSWX-S1_V1,1,OPERA Dynamic Surface Water Extent from Sentinel-1 (Version 1),3,"Sentinel-1A, Sentinel-1B"
+OPERA_L3_DISP-S1_V1,1,OPERA Surface Displacement from Sentinel-1 validated product (Version 1),3,"Sentinel-1A, Sentinel-1B"
+OPERA_L3_DIST-ALERT-HLS_V1,1,OPERA Land Surface Disturbance Alert from Harmonized Landsat Sentinel-2 product (Version 1),3,"Sentinel-2A, Sentinel-2B, Sentinel-2C, LANDSAT-8, LANDSAT-9"
+OPERA_L3_DSWX-HLS_V1,1,OPERA Dynamic Surface Water Extent from Harmonized Landsat Sentinel-2 product (Version 1),3,"LANDSAT-8, Sentinel-2A, Sentinel-2B, Sentinel-2C"
+OPERA_L3_DIST-ANN-HLS_V1,1,OPERA Land Surface Disturbance Annual from Harmonized Landsat Sentinel-2 product (Version 1),3,"Sentinel-2A, Sentinel-2B, Sentinel-2C, LANDSAT-8, LANDSAT-9"
+OPERA_L3_DIST-ALERT-HLS_PROVISIONAL_V0,0,OPERA Land Surface Disturbance Alert from Harmonized Landsat Sentinel-2 provisional product (Version 0),3,"Sentinel-2A, Sentinel-2B, Sentinel-2C, LANDSAT-8, LANDSAT-9"
+OPERA_DSWX-S1_CALVAL_V1,1,OPERA Dynamic Surface Water Extent from Sentinel-1 CalVal Database (Version 1),NA,"Sentinel-1A, Sentinel-1B"
+OPERA_L2_CSLC-S1-STATIC_V1,1,OPERA Coregistered Single-Look Complex from Sentinel-1 Static Layers validated product (Version 1),2,"Sentinel-1A, Sentinel-1B"
+OPERA_L2_CSLC-S1_V1,1,OPERA Coregistered Single-Look Complex from Sentinel-1 validated product (Version 1),2,"Sentinel-1A, Sentinel-1B"
+OPERA_L2_RTC-S1-STATIC_V1,1,OPERA Radiometric Terrain Corrected SAR Backscatter from Sentinel-1 Static Layers validated product (Version 1),2,"Sentinel-1A, Sentinel-1B"
+OPERA_L2_RTC-S1_V1,1,OPERA Radiometric Terrain Corrected SAR Backscatter from Sentinel-1 validated product (Version 1),2,"Sentinel-1A, Sentinel-1B"
+GPM_3IMERGHHE,7,GPM IMERG Early Precipitation L3 Half Hourly 0.1 degree x 0.1 degree V07 (GPM_3IMERGHHE) at GES DISC,3,IMERG
+GPM_3IMERGHH,7,GPM IMERG Final Precipitation L3 Half Hourly 0.1 degree x 0.1 degree V07 (GPM_3IMERGHH) at GES DISC,3,IMERG
+GPM_3IMERGDF,7,GPM IMERG Final Precipitation L3 1 day 0.1 degree x 0.1 degree V07 (GPM_3IMERGDF) at GES DISC,3,IMERG
+GPM_3IMERGHHL,7,GPM IMERG Late Precipitation L3 Half Hourly 0.1 degree x 0.1 degree V07 (GPM_3IMERGHHL) at GES DISC,3,IMERG
+GPM_3IMERGDL,7,GPM IMERG Late Precipitation L3 1 day 0.1 degree x 0.1 degree V07 (GPM_3IMERGDL) at GES DISC,3,IMERG
+GPM_3IMERGM,7,GPM IMERG Final Precipitation L3 1 month 0.1 degree x 0.1 degree V07 (GPM_3IMERGM) at GES DISC,3,IMERG
+GPM_3IMERGDE,7,GPM IMERG Early Precipitation L3 1 day 0.1 degree x 0.1 degree V07 (GPM_3IMERGDE) at GES DISC,3,IMERG
+GPM_MERGIR,1,NCEP/CPC L3 Half Hourly 4km Global (60S - 60N) Merged IR V1 (GPM_MERGIR) at GES DISC,3,IMERG
+GPM_IMERG_LandSeaMask,2,Land/Sea static mask relevant to IMERG precipitation 0.1x0.1 degree V2 (GPM_IMERG_LandSeaMask) at GES DISC,4,IMERG
+IMERG_Precip_Canada_Alaska_2097,1,"ABoVE: Bias-Corrected IMERG Monthly Precipitation for Alaska and Canada, 2000-2020",4,"GROUND STATIONS, GPM, IMERG"
+VNP14IMGTDL_NRT,2,VIIRS (S-NPP) I Band 375 m Active Fire Product NRT (Vector data),2,SUOMI-NPP
+VJ114IMGTDL_NRT,2,VIIRS (NOAA-20/JPSS-1) I Band 375 m Active Fire Product NRT (Vector data),2,NOAA-20
+VJ114IMG_NRT,2,VIIRS/JPSS1 Active Fires 6-Min L2 Swath 375m NRT,2,NOAA-20
+VNP14IMG_NRT,2,VIIRS/NPP Active Fires 6-Min L2 Swath 375m - NRT,2,SUOMI-NPP
+VJ214IMG_NRT,2,VIIRS/JPSS2 Active Fires 6-Min L2 Swath 375m NRT,2,NOAA-21
+VNP14_NRT,2,VIIRS/NPP Thermal Anomalies/Fire 6-Min L2 Swath 750m NRT - V2,2,Suomi-NPP
+VJ114_NRT,2,VIIRS/JPSS1 Thermal Anomalies/Fire 6-Min L2 Swath 750m NRT - V2,2,NOAA-20
+VJ214_NRT,2,VIIRS/JPSS2 Thermal Anomalies/Fire 6-Min L2 Swath 750m NRT - V2,2,NOAA-21
