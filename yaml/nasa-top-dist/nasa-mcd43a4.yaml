@@ -43,5 +43,4 @@ DataAtWork:
   Tutorials:
    - Title: Download Files from S3 Using boto3
      URL: https://github.com/nasa/LPDAAC-Data-Resources/blob/7f58ad3abeca7f0d17637ddb812642c0120a57ab/python/how-tos/Earthdata_Cloud__Download_file_from_S3.ipynb
-     AuthorName: James Acker, Jerome Alfred, Helen Amos, Chris Battisto, Thomas Hearty, Alexis Hunzinger, Lena Iredell, Christoph Keller, Binita KC, Carlee Loeser, Ariana Louise, Kristan Morgan, Dieu My T. Nguyen, Dana Ostrenga, Xiaohua Pan, Kanan Patel, Brianna R. Pagán, Andrey Savtchenko, Elliot Sherman,  
-                  Suhung Shen, Jian Su,Joseph Wysk, Rupesh Shrestha.
+     AuthorName: LPDAAC
