@@ -77,7 +77,6 @@ get_update_frequency <- function(umm) {
 
 get_tags <- function(umm) {
   tags <- unique(unname(c(
-    "aws-pds",
     trimws(unlist(strsplit(unlist(umm$ScienceKeywords) %||% "", ","))),
     trimws(unlist(strsplit(unlist(umm$AncillaryKeywords) %||% "", ",")))
   )))
@@ -95,7 +94,7 @@ get_tags <- function(umm) {
     update_tag_counts(not_valid_tags, "unlisted_tags.csv")
   }
 
-  aws_tags[tolower(aws_tags) %in% tolower(tags)]
+  c("aws-pds", aws_tags[tolower(aws_tags) %in% tolower(tags)])
 }
 
 update_tag_counts <- function(tags, csv_file) {

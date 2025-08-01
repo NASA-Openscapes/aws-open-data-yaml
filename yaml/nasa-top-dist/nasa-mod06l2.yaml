@@ -25,8 +25,15 @@ Contact: 'MODAPS USER SUPPORT TEAM: MODAPSUSO@lists.nasa.gov'
 ManagedBy: NASA
 UpdateFrequency: From 2000-02-24 to Ongoing
 Tags:
-  - atmosphere
   - aws-pds
+  - atmosphere
+  - datacenter
+  - earth observation
+  - global
+  - ice
+  - land
+  - opendap
+  - water
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'MODIS/Terra Clouds 5-Min L2 Swath 1km and 5km. (Format: HDF-EOS)'

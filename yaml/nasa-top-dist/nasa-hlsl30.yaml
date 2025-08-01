@@ -156,7 +156,24 @@ Documentation: https://doi.org/10.5067/HLS/HLSL30.002
 Contact: 'User Services: lpdaac@usgs.gov'
 ManagedBy: NASA
 UpdateFrequency: From 2013-04-11 to Ongoing
-Tags: aws-pds
+Tags:
+  - aws-pds
+  - atmosphere
+  - cog
+  - datacenter
+  - earth observation
+  - geospatial
+  - global
+  - ice
+  - land
+  - metadata
+  - orbit
+  - satellite imagery
+  - stac
+  - surface water
+  - tiles
+  - water
+  - xml
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'HLS Landsat Operational Land Imager Surface Reflectance and TOA
@@ -166,3 +183,8 @@ Resources:
     Type: S3 Bucket
     RequesterPays: false
     ControlledAccess: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentialsREADME
+DataAtWork:
+  Tutorials:
+    - Title: Getting Started with Cloud-Native HLS Data in Python
+      URL: https://github.com/nasa/HLS-Data-Resources/blob/main/python/tutorials/HLS_Tutorial.ipynb
+      AuthorName: Mahsa Jami, Erik A. Bolch, Cole K. Krehbiel, Aaron M. Friesz, Brianna M. Lind

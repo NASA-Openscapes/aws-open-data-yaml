@@ -16,16 +16,33 @@ Description: "The Level-3 OPERA Sentinel-1 Surface Displacement (DISP) product i
   swath mode acquisitions starting in mid-2016. \n\nThe OPERA DISP-S1 product contains
   modified Copernicus Sentinel data (2016-2025).\nRead our doc on how to get AWS Credentials
   to retrieve this data: https://cumulus.asf.alaska.edu/s3credentialsREADME"
-Documentation: https://doi.org//10.5067/SNWG/OPL3DISPS1-V1
+Documentation: https://doi.org/10.5067/SNWG/OPL3DISPS1-V1
+Contact: 'Email: uso@asf.alaska.edu. Home Page: https://www.asf.alaska.edu/'
 ManagedBy: NASA
 UpdateFrequency: From 2016-07-01 to Ongoing
-Tags: aws-pds
+Tags:
+  - aws-pds
+  - earth observation
+  - land
+  - metadata
+  - orbit
+  - radar
+  - sentinel-1
+  - synthetic aperture radar
+  - us
+  - xml
+  - zarr
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'OPERA Surface Displacement from Sentinel-1 validated product (Version
       1). (Format: netCDF-4, XML, PNG, Zarr)'
-    ARN: arn:aws:s3:::asf-cumulus-prod-opera-product/OPERA_L3_DISP-S1/
+    ARN: 'arn:aws:s3:::asf-cumulus-prod-opera-product/OPERA_L3_DISP-S1/'
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
     ControlledAccess: https://cumulus.asf.alaska.edu/s3credentialsREADME
+DataAtWork:
+  Tutorials:
+    - Title: Inspect DISP-S1 Layers
+      URL: https://github.com/OPERA-Cal-Val/OPERA_Applications/blob/main/DISP/Timeseries/opera_disp/inspect_DISP-S1_layers.ipynb
+      AuthorName: Grace Bato and Raimbault Bryan

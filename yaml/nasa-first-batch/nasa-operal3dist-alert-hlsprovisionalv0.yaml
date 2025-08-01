@@ -27,10 +27,19 @@ Description: "The OPERA_L3_DIST-ALERT-HLS Version 0 data product was decommissio
   Basis Document (ATBD).\nRead our doc on how to get AWS Credentials to retrieve this
   data: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentialsREADME"
 Documentation: https://doi.org/10.5067/SNWG/OPERA_L3_DIST-ALERT-HLS_PROVISIONAL_V0.000
-Contact: 'LP DAAC User Services: lpdaac@usgs.gov'
+Contact: 'Email: lpdaac@usgs.gov. Home Page: https://lpdaac.usgs.gov/'
 ManagedBy: NASA
 UpdateFrequency: From 2022-01-01 to 2024-02-26
-Tags: aws-pds
+Tags:
+  - aws-pds
+  - cog
+  - earth observation
+  - environmental
+  - global
+  - land
+  - land cover
+  - land use
+  - us
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'OPERA Land Surface Disturbance Alert from Harmonized Landsat Sentinel-2
@@ -40,3 +49,8 @@ Resources:
     Type: S3 Bucket
     RequesterPays: false
     ControlledAccess: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentialsREADME
+DataAtWork:
+  Tutorials:
+    - Title: Getting Started with OPERA DIST-ALERT-HLS Products
+      URL: https://github.com/OPERA-Cal-Val/OPERA_Applications/blob/main/DIST/DIST_ALERT/Discover/Stream_and_Viz_DIST-ALERT-folium.ipynb
+      AuthorName: Cole Speed and Simran Sangha
