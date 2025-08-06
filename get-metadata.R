@@ -78,7 +78,8 @@ get_update_frequency <- function(umm) {
 get_tags <- function(umm) {
   tags <- unique(unname(c(
     trimws(unlist(strsplit(unlist(umm$ScienceKeywords) %||% "", ","))),
-    trimws(unlist(strsplit(unlist(umm$AncillaryKeywords) %||% "", ",")))
+    trimws(unlist(strsplit(unlist(umm$AncillaryKeywords) %||% "", ","))),
+    get_format(umm)
   )))
 
   aws_tags <- read_yaml(
@@ -179,10 +180,7 @@ get_resources <- function(umm) {
         umm$EntryTitle,
         ". (Format: ",
         paste0(
-          map_chr(
-            umm$ArchiveAndDistributionInformation$FileDistributionInformation,
-            \(x) x$Format
-          ),
+          get_format(umm),
           collapse = ", "
         ),
         ")"
@@ -194,7 +192,7 @@ get_resources <- function(umm) {
       Region = umm$DirectDistributionInformation$Region,
       Type = "S3 Bucket",
       RequesterPays = FALSE,
-      ControlledAccess = umm$DirectDistributionInformation$S3CredentialsAPIDocumentationURL
+      ControlledAccess = umm$DirectDistributionInformation$S3CredentialsAPIEndpoint
     )
   )
 }
@@ -228,6 +226,26 @@ get_publications <- function(umm) {
 
 get_doi <- function(umm) {
   paste0(umm$DOI$Authority %||% "https://doi.org", "/", umm$DOI$DOI)
+}
+
+get_format <- function(umm) {
+  format <- map_chr(
+    umm$ArchiveAndDistributionInformation$FileDistributionInformation,
+    \(x) x$Format
+  )
+
+  if (is.null(format) || length(format) == 0) {
+    format <- map_chr(
+      umm$ArchiveAndDistributionInformation$FileArchiveInformation,
+      \(x) x$Format
+    )
+  }
+
+  if (is.null(format) || length(format) == 0) {
+    return(NULL)
+  }
+
+  trimws(format)
 }
 
 write_nasa_aws_yaml <- function(shortname, tutorials_df, dir) {
@@ -285,6 +303,9 @@ tutorials_df <- read_sheet(
 )
 
 ## One test
+
+meta <- get_metadata("GPM_3IMERGDE")
+
 write_nasa_aws_yaml(
   "MUR-JPL-L4-GLOB-v4.1",
   tutorials_df,
