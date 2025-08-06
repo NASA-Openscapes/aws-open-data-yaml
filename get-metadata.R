@@ -82,9 +82,7 @@ get_tags <- function(umm) {
     get_format(umm)
   )))
 
-  aws_tags <- read_yaml(
-    "https://raw.githubusercontent.com/awslabs/open-data-registry/refs/heads/main/tags.yaml"
-  )
+  aws_tags <- aws_tags()
 
   not_valid_tags <- setdiff(
     tolower(tags),
@@ -176,15 +174,7 @@ get_resources <- function(umm) {
 
   ret <- list(
     list(
-      Description = paste0(
-        umm$EntryTitle,
-        ". (Format: ",
-        paste0(
-          get_format(umm),
-          collapse = ", "
-        ),
-        ")"
-      ),
+      Description = umm$EntryTitle,
       ARN = paste0(
         "arn:aws:s3:::",
         gsub("s3://", "", bucket)
@@ -245,7 +235,22 @@ get_format <- function(umm) {
     return(NULL)
   }
 
-  trimws(format)
+  format <- tolower(format) |>
+    stringr::str_replace_all("netcdf-?4", "netcdf") |>
+    stringr::str_replace_all("(hdf5?)", "\\1") |>
+    stringr::str_replace_all("cloud optimized geotiff", "cog") |>
+    stringr::str_replace_all("geotiff", "tiff")
+
+  format <- stringr::str_split(
+    format,
+    stringr::boundary("word")
+  ) |>
+    unlist() |>
+    trimws()
+
+  # Match against AWS tags
+  aws_tags <- aws_tags()
+  unique(aws_tags[tolower(aws_tags) %in% format])
 }
 
 write_nasa_aws_yaml <- function(shortname, tutorials_df, dir) {
@@ -293,6 +298,12 @@ write_nasa_aws_yaml <- function(shortname, tutorials_df, dir) {
   )
 }
 
+aws_tags <- function() {
+  read_yaml(
+    "https://raw.githubusercontent.com/awslabs/open-data-registry/refs/heads/main/tags.yaml"
+  )
+}
+
 ### Main script to fetch metadata and write YAML file
 
 gs4_auth(email = "andy@openscapes.org")
@@ -305,6 +316,7 @@ tutorials_df <- read_sheet(
 ## One test
 
 meta <- get_metadata("GPM_3IMERGDE")
+meta <- get_metadata("MUR-JPL-L4-GLOB-v4.1")
 
 write_nasa_aws_yaml(
   "MUR-JPL-L4-GLOB-v4.1",
