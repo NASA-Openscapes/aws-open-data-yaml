@@ -12,18 +12,18 @@ Tags:
   - datacenter
   - earth observation
   - global
+  - hdf
   - ice
   - land
   - water
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
-  - Description: 'ATLAS/ICESat-2 L2A Global Geolocated Photon Data V006. (Format:
-      HDF5)'
+  - Description: 'ATLAS/ICESat-2 L2A Global Geolocated Photon Data V006.'
     ARN: arn:aws:s3:::nsidc-cumulus-prod-protected/ATLAS/ATL03/006
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
-    ControlledAccess: https://data.nsidc.earthdatacloud.nasa.gov/s3credentialsREADME
+    ControlledAccess: https://data.nsidc.earthdatacloud.nasa.gov/s3credentials
 DataAtWork:
   Tutorials:
     - Title: Accessing and working with ICESat-2 data in the cloud

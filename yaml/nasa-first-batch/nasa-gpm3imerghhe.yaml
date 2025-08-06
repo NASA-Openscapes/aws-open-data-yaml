@@ -61,6 +61,7 @@ Tags:
   - datacenter
   - forecast
   - global
+  - hdf
   - hydrology
   - land
   - metadata
@@ -70,12 +71,12 @@ Tags:
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'GPM IMERG Early Precipitation L3 Half Hourly 0.1 degree x 0.1 degree
-      V07 (GPM_3IMERGHHE) at GES DISC. (Format: HDF5)'
+      V07 (GPM_3IMERGHHE) at GES DISC.'
     ARN: arn:aws:s3:::gesdisc-cumulus-prod-protected/GPM_L3/GPM_3IMERGHHE.07/
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
-    ControlledAccess: https://data.gesdisc.earthdata.nasa.gov/s3credentialsREADME
+    ControlledAccess: https://data.gesdisc.earthdata.nasa.gov/s3credentials
 DataAtWork:
   Publications:
     - Title: Precipitation Estimation from Remotely Sensed Imagery Using an Artificial

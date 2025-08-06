@@ -19,6 +19,7 @@ Tags:
   - datacenter
   - earth observation
   - global
+  - hdf
   - ice
   - land
   - metadata
@@ -27,12 +28,12 @@ Tags:
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'AIRS/Aqua L1B Infrared (IR) geolocated and calibrated radiances
-      V005 (AIRIBRAD) at GES DISC. (Format: HDF-EOS)'
+      V005 (AIRIBRAD) at GES DISC.'
     ARN: arn:aws:s3:::gesdisc-cumulus-prod-protected/Aqua_AIRS_Level1/AIRIBRAD.005/
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
-    ControlledAccess: https://data.gesdisc.earthdata.nasa.gov/s3credentialsREADME
+    ControlledAccess: https://data.gesdisc.earthdata.nasa.gov/s3credentials
 DataAtWork:
   Tutorials:
     - Title: How to Access GES DISC Data Using Python

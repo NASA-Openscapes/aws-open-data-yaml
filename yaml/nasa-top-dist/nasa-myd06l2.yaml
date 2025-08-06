@@ -32,15 +32,16 @@ Tags:
   - datacenter
   - earth observation
   - global
+  - hdf
   - ice
   - land
   - opendap
   - water
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
-  - Description: 'MODIS/Aqua Clouds 5-Min L2 Swath 1km and 5km. (Format: HDF-EOS)'
+  - Description: 'MODIS/Aqua Clouds 5-Min L2 Swath 1km and 5km.'
     ARN: arn:aws:s3:::prod-lads/MYD06_L2
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
-    ControlledAccess: https://data.laadsdaac.earthdatacloud.nasa.gov/s3credentialsREADME
+    ControlledAccess: https://data.laadsdaac.earthdatacloud.nasa.gov/s3credentials

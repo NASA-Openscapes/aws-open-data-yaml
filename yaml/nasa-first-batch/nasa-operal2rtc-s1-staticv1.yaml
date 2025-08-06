@@ -22,12 +22,13 @@ Tags:
   - radar
   - sentinel-1
   - synthetic aperture radar
+  - tiff
   - xml
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'OPERA Radiometric Terrain Corrected SAR Backscatter from Sentinel-1
-      Static Layers validated product (Version 1). (Format: GeoTIFF, XML)'
-    ARN: 'arn:aws:s3:::asf-cumulus-prod-opera-products/OPERA_L2_RTC-S1_STATIC/'
+      Static Layers validated product (Version 1).'
+    ARN: arn:aws:s3:::asf-cumulus-prod-opera-products/OPERA_L2_RTC-S1_STATIC/
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
@@ -41,7 +42,7 @@ DataAtWork:
   Tutorials:
     - Title: Load, Mosaic, and Visualize OPERA RTC-S1 Data
       URL: https://github.com/OPERA-Cal-Val/OPERA_Applications/blob/main/RTC/notebooks/RTC_notebook.ipynb
-      AuthorName: Karthik Venkataramani
+      AuthorName: K. Venkataramani
     - Title: RTC Landslide Example
       URL: https://github.com/OPERA-Cal-Val/OPERA_Applications/blob/main/RTC/notebooks/RTC_landslide_example.ipynb
-      AuthorName: Karthik Venkataramani
+      AuthorName: K. Venkataramani

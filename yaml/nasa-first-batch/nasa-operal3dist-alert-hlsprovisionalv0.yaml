@@ -39,18 +39,20 @@ Tags:
   - land
   - land cover
   - land use
-  - us
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'OPERA Land Surface Disturbance Alert from Harmonized Landsat Sentinel-2
-      provisional product (Version 0). (Format: Cloud Optimized GeoTIFF (COG))'
+      provisional product (Version 0).'
     ARN: arn:aws:s3:::lp-protected/OPERA_DIST-ALERT-HLS_PROVISIONAL_V0.000
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
-    ControlledAccess: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentialsREADME
+    ControlledAccess: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials
 DataAtWork:
   Tutorials:
     - Title: Getting Started with OPERA DIST-ALERT-HLS Products
       URL: https://github.com/OPERA-Cal-Val/OPERA_Applications/blob/main/DIST/DIST_ALERT/Discover/Stream_and_Viz_DIST-ALERT-folium.ipynb
-      AuthorName: Cole Speed and Simran Sangha
+      AuthorName: R. Dhillon and M. Grace Bato
+    - Title: Getting Started with OPERA DIST Product
+      URL: https://github.com/OPERA-Cal-Val/OPERA_Applications/blob/main/DIST/DIST_ALERT/Wildfire/Intro_To_DIST.ipynb
+      AuthorName: M. Grace Bato and R. Dhillon

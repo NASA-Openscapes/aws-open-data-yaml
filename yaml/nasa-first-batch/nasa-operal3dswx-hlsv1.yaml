@@ -32,6 +32,7 @@ ManagedBy: NASA
 UpdateFrequency: From 2023-04-04 to Ongoing (Daily - < Weekly)
 Tags:
   - aws-pds
+  - cog
   - datacenter
   - earth observation
   - ice
@@ -39,17 +40,16 @@ Tags:
   - land cover
   - metadata
   - surface water
-  - us
   - water
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'OPERA Dynamic Surface Water Extent from Harmonized Landsat Sentinel-2
-      product (Version 1). (Format: Cloud Optimized GeoTIFF)'
+      product (Version 1).'
     ARN: arn:aws:s3:::podaac-ops-cumulus-protected/OPERA_L3_DSWX-HLS_V1
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
-    ControlledAccess: https://archive.podaac.earthdata.nasa.gov/s3credentialsREADME
+    ControlledAccess: https://archive.podaac.earthdata.nasa.gov/s3credentials
 DataAtWork:
   Publications:
     - Title: Improved Automated Detection of Subpixel-Scale Inundation—Revised Dynamic
@@ -61,3 +61,12 @@ DataAtWork:
       URL: https://podaac.github.io/tutorials/notebooks/datasets/OPERA_GIS_Cloud.html
       AuthorName: Nicholas Tarpinian
       NotebookURL: https://github.com/podaac/tutorials/blob/master/notebooks/datasets/OPERA_GIS_Cloud.ipynb
+    - Title: Access DSWx-HLS S3
+      URL: https://github.com/OPERA-Cal-Val/OPERA_Applications/blob/main/DSWx/Discover/Access_DSWx-HLS_S3.ipynb
+      AuthorName: M. Grace Bato
+    - Title: Stream and Viz DSWx-HLS via Direct HTTPS
+      URL: https://github.com/OPERA-Cal-Val/OPERA_Applications/blob/main/DSWx/Discover/Stream_and_Viz_DSWx-HLS_viaDirectHTTPS.ipynb
+      AuthorName: M. Grace Bato
+    - Title: Getting Started with OPERA DSWx Product
+      URL: https://github.com/OPERA-Cal-Val/OPERA_Applications/blob/main/DSWx/Reservoir/Intro_to_DSWx.ipynb
+      AuthorName: K. Devlin and M. Grace Bato
