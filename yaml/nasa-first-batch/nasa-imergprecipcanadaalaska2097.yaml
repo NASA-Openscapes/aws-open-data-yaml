@@ -14,15 +14,16 @@ Tags:
   - global
   - land
   - radar
+  - cog
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'ABoVE: Bias-Corrected IMERG Monthly Precipitation for Alaska and
-      Canada, 2000-2020. (Format: COG)'
+      Canada, 2000-2020.'
     ARN: arn:aws:s3:::ornl-cumulus-prod-protected/above/IMERG_Precip_Canada_Alaska/data
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
-    ControlledAccess: https://data.ornldaac.earthdata.nasa.gov/s3credentialsREADME
+    ControlledAccess: https://data.ornldaac.earthdata.nasa.gov/s3credentials
 DataAtWork:
   Publications: ~
   Tutorials:

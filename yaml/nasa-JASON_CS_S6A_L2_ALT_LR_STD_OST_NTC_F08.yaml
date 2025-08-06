@@ -1,0 +1,47 @@
+Name: Sentinel-6A MF Jason-CS L2 P4 Altimeter Low Resolution (LR) NTC Ocean Surface
+  Topography F08
+Description: "Provides low resolution (LR) non-time critical (NTC; 60-day latency)
+  measurements of sea surface height anomaly (SSHA), Significant Wave Height (SWH),
+  and Wind Speed, along with 1 Hz and 20 Hz measurements from the radar altimeter,
+  orbit altitude, environmental range corrections, instrument corrections, and geophysical
+  models. The NTC product is analogous to the Jason-3 GDR product. \nRead our doc
+  on how to get AWS Credentials to retrieve this data: https://archive.podaac.earthdata.nasa.gov/s3credentialsREADME"
+Documentation: https://doi.org/10.5067/S6AP4-2LSNTR-F08
+Contact: 'Help Desk: podaac@podaac.jpl.nasa.gov'
+ManagedBy: NASA
+UpdateFrequency: From 2020-11-30 to Ongoing (Weekly - < Monthly)
+Tags:
+  - datacenter
+  - earth observation
+  - environmental
+  - global
+  - oceans
+  - orbit
+  - radar
+  - aws-pds
+License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
+Resources:
+  - Description: 'Sentinel-6A MF Jason-CS L2 P4 Altimeter Low Resolution (LR) NTC
+      Ocean Surface Topography F08. (Format: netCDF-4)'
+    ARN: arn:aws:s3:::podaac-ops-cumulus-protected/JASON_CS_S6A_L2_ALT_LR_STD_OST_NTC_F08/
+    Region: us-west-2
+    Type: S3 Bucket
+    RequesterPays: false
+    ControlledAccess: https://archive.podaac.earthdata.nasa.gov/s3credentialsREADME
+DataAtWork:
+  Publications:
+    - Title: 'The Copernicus Sentinel-6 mission: Enhanced continuity of satellite
+        sea level measurements from space'
+      URL: 10.1016/j.rse.2021.112395
+      AuthorName: Donlon, C. J,  R. Cullen, L. Giulicchi, P. Vuilleumier, C. R. Francis,
+        M. Kuschnerus, W. Simpson, A. Bouridah, M. Caleno, R. Bertoni, J. Rancaño,
+        E. Pourier, A. Hyslop, J. Mulcahy, R. Knockaert, C. Hunter, A. Webb, M. Fornari,
+        P. Vaze, S. Brown, J. Willis, S. Desai, J-D Desjonqueres, R. Scharroo, C.
+        Martin-Puig, E. Leuliette, A. Egido, W. H. F. Smith, P. B., S. Le Gac, N.
+        Picot, and G. Tavernier
+DataAtWork:
+  Tutorials:
+    - Title: Access Sentinel 6 Data in the Cloud
+      URL: https://podaac.github.io/tutorials/notebooks/sentinel-6/S6_Cloud_Notebook.html
+      AuthorName: Julie Sanchez
+    

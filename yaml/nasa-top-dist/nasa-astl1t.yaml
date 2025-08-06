@@ -29,15 +29,16 @@ Tags:
   - global
   - land
   - orbit
+  - cog
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'ASTER Level 1T Precision Terrain Corrected Registered At-Sensor
-      Radiance V004. (Format: Cloud Optimized GeoTIFF (COG))'
+      Radiance V004.'
     ARN: arn:aws:s3:::lp-prod-protected/AST_L1T.004
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
-    ControlledAccess: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentialsREADME
+    ControlledAccess: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials
 DataAtWork:
   Publications: ~
   Tutorials:

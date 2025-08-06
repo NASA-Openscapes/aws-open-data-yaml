@@ -23,16 +23,17 @@ Tags:
   - stac
   - surface water
   - synthetic aperture radar
+  - tiff
   - urban
   - water
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
-  - Description: 'SENTINEL-1A_SLC. (Format: GeoTIFF)'
-    ARN: 'arn:aws:s3::asf-ngap2w-p-s1-slc-7b420b89'
+  - Description: 'SENTINEL-1A_SLC.'
+    ARN: arn:aws:s3::asf-ngap2w-p-s1-slc-7b420b89
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
-    ControlledAccess: https://sentinel1.asf.alaska.edu/s3credentialsREADME
+    ControlledAccess: https://sentinel1.asf.alaska.edu/s3credentials
 DataAtWork:
   Tutorials:
   - Title: Interferometric Synthetic Aperture Radar Tutorial

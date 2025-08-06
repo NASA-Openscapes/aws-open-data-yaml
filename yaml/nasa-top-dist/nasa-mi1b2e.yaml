@@ -29,15 +29,16 @@ Tags:
   - land
   - opendap
   - orbit
+  - netcdf
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
-  - Description: 'MISR Level 1B2 Ellipsoid Data V004. (Format: netCDF-4)'
+  - Description: 'MISR Level 1B2 Ellipsoid Data V004.'
     ARN: arn:aws:s3:::asdc-prod-protected/MISR/MI1B2E_004
     ARN: arn:aws:s3:::asdc-prod-protected/MISR/MI1B2E_004
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
-    ControlledAccess: https://data.asdc.earthdata.nasa.gov/s3credentialsREADME
+    ControlledAccess: https://data.asdc.earthdata.nasa.gov/s3credentials
 DataAtWork:
   Publications: ~
   Tutorials: ~

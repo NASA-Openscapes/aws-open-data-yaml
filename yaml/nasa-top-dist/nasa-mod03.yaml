@@ -26,15 +26,16 @@ Tags:
   - datacenter
   - earth observation
   - global
+  - hdf
   - ice
   - land
   - opendap
   - orbit
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
-  - Description: 'MODIS/Terra Geolocation Fields 5-Min L1A Swath 1km. (Format: HDF-EOS)'
+  - Description: 'MODIS/Terra Geolocation Fields 5-Min L1A Swath 1km.'
     ARN: arn:aws:s3:::prod-lads/MOD03
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
-    ControlledAccess: https://data.laadsdaac.earthdatacloud.nasa.gov/s3credentialsREADME
+    ControlledAccess: https://data.laadsdaac.earthdatacloud.nasa.gov/s3credentials

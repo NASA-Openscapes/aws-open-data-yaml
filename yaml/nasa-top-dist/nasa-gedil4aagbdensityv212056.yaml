@@ -15,15 +15,15 @@ Tags:
   - land cover
   - lidar
   - opendap
+  - hdf
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
-  - Description: 'GEDI L4A Footprint Level Aboveground Biomass Density, Version 2.1.
-      (Format: HDF5)'
+  - Description: 'GEDI L4A Footprint Level Aboveground Biomass Density, Version 2.1.'
     ARN: arn:aws:s3:::ornl-cumulus-prod-protected/gedi/GEDI_L4A_AGB_Density_V2_1/data
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
-    ControlledAccess: https://data.ornldaac.earthdata.nasa.gov/s3credentialsREADME
+    ControlledAccess: https://data.ornldaac.earthdata.nasa.gov/s3credentials
 DataAtWork:
   Publications: ~
   Tutorials: 

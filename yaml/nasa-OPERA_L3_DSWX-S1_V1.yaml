@@ -12,37 +12,34 @@ Description: "This dataset contains Level-3 Dynamic OPERA Surface Water Extent f
   OPERA DSWx-S1 product contains modified Copernicus Sentinel data (2024-2025).\n<br><br>\nTo
   access the calibration/validation database for OPERA Dynamic Surface Water Extent
   Products, please contact podaac@podaac.jpl.nasa.gov \nRead our doc on how to get
-  AWS Credentials to retrieve this data: https://archive.podaac.earthdata.nasa.gov/s3credentialsREADME
+  AWS Credentials to retrieve this data: https://archive.podaac.earthdata.nasa.gov/s3credentialsREADME"
 Documentation: https://doi.org/10.5067/OPDSWS1-L3V1
-Contact: 'Help Desk: podaac@podaac.jpl.nasa.gov. Home Page: https://podaac.jpl.nasa.gov/'
+Contact: 'Help Desk: podaac@podaac.jpl.nasa.gov'
 ManagedBy: NASA
 UpdateFrequency: From 2024-08-01 to Ongoing (Daily - < Weekly)
 Tags:
   - aws-pds
-  - cog
-  - datacenter
-  - earth observation
-  - global
-  - land
-  - orbit
-  - radar
-  - sentinel-1
+  - EARTH SCIENCE
+  - TERRESTRIAL HYDROSPHERE
+  - SURFACE WATER
+  - SURFACE WATER PROCESSES/MEASUREMENTS
+  - TOTAL SURFACE WATER
   - surface water
-  - water
+  - surface water extent
+  - water area
+  - DSWX
+  - OPERA
+  - Sentinel-1
+  - S1
+  - Radar
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
-  - Description: 'OPERA Dynamic Surface Water Extent from Sentinel-1 (Version 1).'
+  - Description: 'OPERA Dynamic Surface Water Extent from Sentinel-1 (Version 1).
+      (Format: Cloud Optimized GeoTIFF)'
     ARN: arn:aws:s3:::podaac-ops-cumulus-protected/OPERA_L3_DSWX-S1_V1
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
-    ControlledAccess: https://archive.podaac.earthdata.nasa.gov/s3credentials
+    ControlledAccess: https://archive.podaac.earthdata.nasa.gov/s3credentialsREADME
 DataAtWork:
-  Tutorials:
-    - Title: Working with OPERA Dynamic Surface Water Extent (DSWx) Data
-      URL: https://podaac.github.io/tutorials/notebooks/datasets/OPERA_GIS_Cloud.html
-      AuthorName: Nicholas Tarpinian
-      NotebookURL: https://github.com/podaac/tutorials/blob/master/notebooks/datasets/OPERA_GIS_Cloud.ipynb
-    - Title: Generate Flood Maps without downloading OPERA DSWx-S1 products locally
-      URL: https://github.com/OPERA-Cal-Val/OPERA_Applications/blob/main/DSWx/Flood/Brazil_DSWx-S1_FloodProduct.ipynb
-      AuthorName: S. Sangha
+  Tutorials: Fill in

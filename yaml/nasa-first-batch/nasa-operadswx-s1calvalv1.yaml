@@ -13,19 +13,23 @@ Tags:
   - earth observation
   - sentinel-1
   - surface water
+  - tiff
   - water
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'OPERA Dynamic Surface Water Extent from Sentinel-1 CalVal Database
-      (Version 1). (Format: zip)'
+      (Version 1).'
     ARN: arn:aws:s3:::podaac-ops-cumulus-protected/OPERA_DSWX-S1_CALVAL_V1/
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
-    ControlledAccess: https://archive.podaac.earthdata.nasa.gov/s3credentialsREADME
+    ControlledAccess: https://archive.podaac.earthdata.nasa.gov/s3credentials
 DataAtWork:
   Tutorials:
     - Title: Working with OPERA Dynamic Surface Water Extent (DSWx) Data
       URL: https://podaac.github.io/tutorials/notebooks/datasets/OPERA_GIS_Cloud.html
       AuthorName: Nicholas Tarpinian
       NotebookURL: https://github.com/podaac/tutorials/blob/master/notebooks/datasets/OPERA_GIS_Cloud.ipynb
+    - Title: Generate Flood Maps without downloading OPERA DSWx-S1 products locally
+      URL: https://github.com/OPERA-Cal-Val/OPERA_Applications/blob/main/DSWx/Flood/Brazil_DSWx-S1_FloodProduct.ipynb
+      AuthorName: S. Sangha

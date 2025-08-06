@@ -24,6 +24,7 @@ Tags:
   - earth observation
   - geospatial
   - global
+  - hdf
   - ice
   - land
   - opendap
@@ -31,12 +32,12 @@ Tags:
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'MODIS/Terra Surface Reflectance Daily L2G Global 1km and 500m SIN
-      Grid V061. (Format: HDF-EOS2)'
+      Grid V061.'
     ARN: arn:aws:s3:::lp-prod-protected/MOD09GA.061
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
-    ControlledAccess: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentialsREADME
+    ControlledAccess: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials
 DataAtWork:
   Tutorials:
     - Title: Download Files from S3 Using boto3

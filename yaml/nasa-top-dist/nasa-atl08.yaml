@@ -14,14 +14,15 @@ Tags:
   - global
   - ice
   - land
+  - hdf
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
-  - Description: 'ATLAS/ICESat-2 L3A Land and Vegetation Height V006. (Format: HDF5)'
+  - Description: 'ATLAS/ICESat-2 L3A Land and Vegetation Height V006.'
     ARN: arn:aws:s3:::nsidc-cumulus-prod-protected/ATLAS/ATL08/006
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
-    ControlledAccess: https://data.nsidc.earthdatacloud.nasa.gov/s3credentialsREADME
+    ControlledAccess: https://data.nsidc.earthdatacloud.nasa.gov/s3credentials
 DataAtWork:
   Publications: ~
   Tutorials: 
