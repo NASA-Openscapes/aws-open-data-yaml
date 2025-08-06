@@ -1,0 +1,46 @@
+Name: S-MODE Shipboard Radiometer Measurements Version 1
+Description: "This dataset contains shipboard radiometer measurements taken during
+  the Sub-Mesoscale Ocean Dynamics Experiment (S-MODE) pilot campaign conducted approximately
+  300 km offshore of San Francisco over two weeks in October 2021. S-MODE aims to
+  understand how ocean dynamics acting on short spatial scales influence the vertical
+  exchange of physical and biological variables in the ocean. Air-Sea Interaction
+  METeorology (ASIMET) sensors mounted onboard the R/V Oceanus record shortwave and
+  longwave radiation fluxes. These are used by S-MODE to compare with DopplerScatt
+  retrievals. Data are available in netCDF format. \nRead our doc on how to get AWS
+  Credentials to retrieve this data: https://archive.podaac.earthdata.nasa.gov/s3credentialsREADME"
+Documentation: https://doi.org/10.5067/SMODE-RVRAD
+ManagedBy: NASA
+UpdateFrequency: From 2021-08-01 to Ongoing (1 minute - < 1 hour)
+Tags:
+  - aws-pds
+  - EARTH SCIENCE
+  - ATMOSPHERE
+  - ATMOSPHERIC RADIATION
+  - SHORTWAVE RADIATION
+  - DOWNWELLING SHORTWAVE RADIATION
+  - LONGWAVE RADIATION
+  - DOWNWELLING LONGWAVE RADIATION
+  - S-MODE
+  - Sub-Mesoscale Ocean Dynamics Experiment
+  - earth science
+  - atmosphere
+  - atmospheric radiation
+  - downwelling shortwave radiation
+  - longwave radiation
+  - downwelling longwave radiation
+  - ship
+  - shipboard
+  - ASIMET
+  - radiometer
+  - in-situ
+  - meteorology
+License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
+Resources:
+  - Description: 'S-MODE Shipboard Radiometer Measurements Version 1. (Format: netCDF-4)'
+    ARN: arn:aws:s3:::podaac-ops-cumulus-protected/SMODE_LX_SHIPBOARD_RADIOMETER_METEOROLOGY_V1/
+    Region: us-west-2
+    Type: S3 Bucket
+    RequesterPays: false
+    ControlledAccess: https://archive.podaac.earthdata.nasa.gov/s3credentialsREADME
+DataAtWork:
+  Tutorials: Fill in

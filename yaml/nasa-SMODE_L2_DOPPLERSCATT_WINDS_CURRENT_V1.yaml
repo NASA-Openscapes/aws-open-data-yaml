@@ -1,0 +1,52 @@
+Name: S-MODE DopplerScatt Level 2 Ocean Winds and Currents Version 1
+Description: |-
+  This dataset contains concurrent airborne DopplerScatt radar retrievals of surface vector winds and ocean currents from the Sub-Mesoscale Ocean Dynamics Experiment (S-MODE) during a pilot campaign conducted approximately 300 km offshore of San Francisco over two weeks in October 2021. S-MODE aims to understand how ocean dynamics acting on short spatial scales influence the vertical exchange of physical and biological variables in the ocean. DopplerScatt is a Ka-band (35.75 GHz) scatterometer with a swath width of 24 km that records Doppler measurements of the relative velocity between the platform and the surface. It is mounted on a B200 aircraft which flies daily surveys of the field domain during deployments, and data is used to give larger scale context, and also to compare with in-situ measurements of velocities and divergence. Level 2 data includes estimates of surface winds and currents. The V1 data have been cross-calibrated against SIO-DopVis leading to the 'dopvis_2021' current geophysical model function. It is expected that additional DopVis data will lead to a reprocessing of this data set and it should be regarded as provisional, to be refined after future S-MODE deployments. Data are available in netCDF format.
+  Read our doc on how to get AWS Credentials to retrieve this data: https://archive.podaac.earthdata.nasa.gov/s3credentialsREADME
+Documentation: https://doi.org/10.5067/SMODE-DSCT2
+ManagedBy: NASA
+UpdateFrequency: From 2021-10-20 to 2021-11-05 (1 second - < 1 minute)
+Tags:
+  - aws-pds
+  - EARTH SCIENCE
+  - ATMOSPHERE
+  - ATMOSPHERIC WINDS
+  - SURFACE WINDS
+  - OCEANS
+  - OCEAN CIRCULATION
+  - OCEAN CURRENTS
+  - SURFACE CURRENTS
+  - SPECTRAL/ENGINEERING
+  - RADAR
+  - DOPPLER VELOCITY
+  - S-MODE
+  - Sub-Mesoscale Ocean Dynamics Experiment
+  - earth science
+  - atmosphere
+  - atmospheric winds
+  - surface winds
+  - oceans
+  - ocean circulation
+  - ocean currents
+  - spectral/engineering
+  - radar
+  - doppler velocity
+  - dopplerscatt
+  - airborne
+  - scatterometer
+License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
+Resources:
+  - Description: 'S-MODE DopplerScatt Level 2 Ocean Winds and Currents Version 1.
+      (Format: netCDF-4)'
+    ARN: arn:aws:s3:::podaac-ops-cumulus-protected/SMODE_L2_DOPPLERSCATT_WINDS_CURRENT_V1/
+    Region: us-west-2
+    Type: S3 Bucket
+    RequesterPays: false
+    ControlledAccess: https://archive.podaac.earthdata.nasa.gov/s3credentialsREADME
+DataAtWork:
+  Publications:
+    - Title: Estimating Ocean Vector Winds and Currents Using a Ka-Band Pencil-Beam
+        Doppler Scatterometer.
+      URL: 10.3390/rs10040576
+      AuthorName: Rodríguez, E., Wineteer, A., Perkovic-Martin, D., Gál, T., Stiles,
+        B., Niamsuwan, N., & Monje, R.
+  Tutorials: Fill in
