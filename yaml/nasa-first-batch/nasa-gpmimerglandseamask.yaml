@@ -20,15 +20,16 @@ Tags:
   - land
   - metadata
   - opendap
+  - netcdf
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'Land/Sea static mask relevant to IMERG precipitation 0.1x0.1 degree
-      V2 (GPM_IMERG_LandSeaMask) at GES DISC. (Format: netCDF)'
+      V2 (GPM_IMERG_LandSeaMask) at GES DISC.'
     ARN: arn:aws:s3:::gesdisc-cumulus-prod-protected/AUXILIARY/GPM_IMERG_LandSeaMask.2/
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
-    ControlledAccess: https://data.gesdisc.earthdata.nasa.gov/s3credentialsREADME
+    ControlledAccess: https://data.gesdisc.earthdata.nasa.gov/s3credentials
 DataAtWork:
   Publications: ~
   Tutorials: 
