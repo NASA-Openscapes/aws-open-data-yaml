@@ -1,4 +1,6 @@
 library(googlesheets4)
+library(readr)
+library(dplyr)
 library(devtools)
 
 devtools::load_all()
