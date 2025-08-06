@@ -177,12 +177,12 @@ Tags:
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'HLS Landsat Operational Land Imager Surface Reflectance and TOA
-      Brightness Daily Global 30m v2.0. (Format: Cloud Optimized GeoTIFF (COG))'
+      Brightness Daily Global 30m v2.0.'
     ARN: arn:aws:s3:::lp-prod-protected/HLSL30.020
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
-    ControlledAccess: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentialsREADME
+    ControlledAccess: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials
 DataAtWork:
   Tutorials:
     - Title: Getting Started with Cloud-Native HLS Data in Python

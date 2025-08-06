@@ -43,17 +43,18 @@ Tags:
   - ice
   - land
   - metadata
+  - netCDF
   - opendap
   - water
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'MERRA-2 inst3_3d_asm_Nv: 3d,3-Hourly,Instantaneous,Model-Level,Assimilation,Assimilated
-      Meteorological Fields 0.625 x 0.5 degree V5.12.4 (M2I3NVASM) at GES DISC. (Format: netCDF)'
+      Meteorological Fields 0.625 x 0.5 degree V5.12.4 (M2I3NVASM) at GES DISC.'
     ARN: arn:aws:s3:::gesdisc-cumulus-prod-protected/MERRA2/M2I3NVASM.5.12.4/
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
-    ControlledAccess: https://data.gesdisc.earthdata.nasa.gov/s3credentialsREADME
+    ControlledAccess: https://data.gesdisc.earthdata.nasa.gov/s3credentials
 DataAtWork:
   Publications:
     - Title: The Modern-Era Retrospective Analysis for Research and Applications,

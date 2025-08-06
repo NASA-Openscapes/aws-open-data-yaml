@@ -11,6 +11,7 @@ Tags:
   - aws-pds
   - coastal
   - earth observation
+  - hdf
   - ice
   - land
   - metadata
@@ -23,12 +24,12 @@ Tags:
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'OPERA Coregistered Single-Look Complex from Sentinel-1 Static Layers
-      validated product (Version 1). (Format: HDF5, XML)'
-    ARN: 'arn:aws:s3:::asf-cumulus-prod-opera-products/OPERA_L2_CSLC-S1_STATIC/'
+      validated product (Version 1).'
+    ARN: arn:aws:s3:::asf-cumulus-prod-opera-products/OPERA_L2_CSLC-S1_STATIC/
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
-    ControlledAccess: https://cumulus.asf.alaska.edu/s3credentialsREADME
+    ControlledAccess: https://cumulus.asf.alaska.edu/s3credentials
 DataAtWork:
   Tutorials:
     - Title: Generate inteferograms without the need to download OPERA CSLC-S1 products locally

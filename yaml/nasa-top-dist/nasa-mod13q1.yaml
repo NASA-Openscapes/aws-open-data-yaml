@@ -30,19 +30,19 @@ Tags:
   - earth observation
   - geospatial
   - global
+  - hdf
   - ice
   - land
   - opendap
   - satellite imagery
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
-  - Description: 'MODIS/Terra Vegetation Indices 16-Day L3 Global 250m SIN Grid V061.
-      (Format: HDF-EOS2)'
+  - Description: 'MODIS/Terra Vegetation Indices 16-Day L3 Global 250m SIN Grid V061.'
     ARN: arn:aws:s3:::lp-prod-protected/MOD13Q1.061
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
-    ControlledAccess: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentialsREADME
+    ControlledAccess: https://data.lpdaac.earthdatacloud.nasa.gov/s3credentials
 DataAtWork:
   Tutorials:
     - Title: Download Files from S3 Using boto3
