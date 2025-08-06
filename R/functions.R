@@ -195,7 +195,7 @@ get_publications <- function(umm) {
     doi <- pub$DOI[[1]]
     url <- if (!is.null(doi) && !grepl("^NASA/.+", doi)) {
       if (!grepl("^https?://", doi)) {
-        paste0("https://doi.org/", doi)
+        paste0("https://doi.org/", gsub("^/", "", doi))
       } else {
         doi
       }
