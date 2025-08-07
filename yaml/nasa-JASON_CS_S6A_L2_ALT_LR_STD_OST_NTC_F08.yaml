@@ -39,9 +39,7 @@ DataAtWork:
         P. Vaze, S. Brown, J. Willis, S. Desai, J-D Desjonqueres, R. Scharroo, C.
         Martin-Puig, E. Leuliette, A. Egido, W. H. F. Smith, P. B., S. Le Gac, N.
         Picot, and G. Tavernier
-DataAtWork:
   Tutorials:
     - Title: Access Sentinel 6 Data in the Cloud
       URL: https://podaac.github.io/tutorials/notebooks/sentinel-6/S6_Cloud_Notebook.html
       AuthorName: Julie Sanchez
-    
