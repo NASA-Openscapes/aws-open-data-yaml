@@ -35,6 +35,6 @@ DataAtWork:
       AuthorName: Kilpatrick, K.A., Podestá, G., Walsh, S., Williams, E., Halliwell,
         V., Szczodrak, M., Brown, O.B., Minnett, P.J., & Evans, R.
   Tutorials:
-   - Title: Direct S3 Access tutorial
-     URL: https://github.com/podaac/tutorials/blob/3d2ac9cb3626b656802638f864631a68beb11823/notebooks/s3/S3-Access.ipynb#L33
-     AuthorName: PODAAC
+    - Title: Direct S3 Access tutorial
+      URL: https://github.com/podaac/tutorials/blob/3d2ac9cb3626b656802638f864631a68beb11823/notebooks/s3/S3-Access.ipynb#L33
+      AuthorName: PODAAC
