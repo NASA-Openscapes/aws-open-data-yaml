@@ -57,10 +57,16 @@ for (f in list.files(
 )) {
   url <- yaml::read_yaml(f)$Documentation
 
-  is_error <- httr2::request(url) |>
-    httr2::req_error(is_error = \(resp) FALSE) |>
-    httr2::req_perform() |>
-    httr2::resp_is_error()
+  is_error <- tryCatch(
+    httr2::request(url) |>
+      httr2::req_error(is_error = \(resp) FALSE) |>
+      httr2::req_perform() |>
+      httr2::resp_is_error(),
+    error = function(e) {
+      warning(paste0(url, ": ", e$message))
+      TRUE
+    }
+  )
 
   if (is_error) {
     cat(paste("Broken DOI link in", f, ":", url, "\n"))
