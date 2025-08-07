@@ -33,7 +33,6 @@ License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/
 Resources:
   - Description: 'MODIS/Terra+Aqua BRDF/Albedo Albedo Daily L3 Global - 500m V061.'
     ARN: arn:aws:s3:::lp-prod-protected/MCD43A3.061
-    ARN: arn:aws:s3:::lp-prod-protected/MCD43A3.061
     Region: us-west-2
     Type: S3 Bucket
     RequesterPays: false
@@ -41,6 +40,6 @@ Resources:
 DataAtWork:
   Publications: ~
   Tutorials:
-   - Title: Download Files from S3 Using boto3
-     URL: https://github.com/nasa/LPDAAC-Data-Resources/blob/7f58ad3abeca7f0d17637ddb812642c0120a57ab/python/how-tos/Earthdata_Cloud__Download_file_from_S3.ipynb
-     AuthorName: LPDAAC
+    - Title: Download Files from S3 Using boto3
+      URL: https://github.com/nasa/LPDAAC-Data-Resources/blob/7f58ad3abeca7f0d17637ddb812642c0120a57ab/python/how-tos/Earthdata_Cloud__Download_file_from_S3.ipynb
+      AuthorName: LPDAAC
