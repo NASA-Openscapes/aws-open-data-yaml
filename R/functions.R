@@ -74,10 +74,18 @@ get_tags <- function(umm) {
 
   aws_tags <- aws_tags()
 
-  flat_umm <- unlist(umm) |> tolower()
+  flat_umm <- unlist(umm) |>
+    tolower() |>
+    stringr::str_replace_all(
+      "data center",
+      "datacenter"
+    )
 
   parsed_tags <- purrr::map(aws_tags, \(tag) {
-    stringr::str_extract(flat_umm, pattern = stringr::fixed(tolower(tag)))
+    stringr::str_extract(
+      flat_umm,
+      pattern = stringr::regex(paste0("\\b", tolower(tag), "\\b"))
+    )
   }) |>
     unlist() |>
     na.omit() |>
@@ -95,6 +103,7 @@ get_tags <- function(umm) {
   }
 
   c("aws-pds", aws_tags[tolower(aws_tags) %in% tolower(tags)]) |>
+    setdiff("email") |>
     unique() |>
     sort()
 }
@@ -184,7 +193,7 @@ get_resources <- function(umm) {
 
   ret <- list(
     list(
-      Description = umm$EntryTitle,
+      Description = format_title(umm$EntryTitle),
       ARN = paste0(
         "arn:aws:s3:::",
         gsub("s3://", "", bucket)
@@ -312,4 +321,21 @@ aws_tags <- function() {
   yaml::read_yaml(
     "https://raw.githubusercontent.com/awslabs/open-data-registry/refs/heads/main/tags.yaml"
   )
+}
+
+format_title <- function(title) {
+  title <- trimws(title)
+  if (nchar(title) == 0) {
+    return(NULL)
+  }
+  if (!grepl("^'", title)) {
+    title <- paste0("'", title)
+  }
+  if (!grepl("'$", title)) {
+    title <- paste0(title, "'")
+  }
+  if (!grepl("\\.$", title)) {
+    title <- paste0(title, ".")
+  }
+  title
 }
