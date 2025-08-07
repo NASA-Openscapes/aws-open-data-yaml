@@ -47,38 +47,14 @@ for (shortname in first_batch) {
   )
 }
 
-## Check long names and manually edit:
-sapply(
-  list.files("yaml", pattern = "*.yaml", recursive = TRUE, full.names = TRUE),
-  \(x) {
-    f <- yaml::read_yaml(x)
-    nchar(f$Name)
-  }
-) |>
-  Filter(\(x) x > 130, x = _)
+## PODAAC
+podaac <- read_csv("podaac-datasets.csv") |>
+  pull("short_name")
 
-## Test DOIs:
-
-for (f in list.files(
-  "yaml",
-  pattern = "*.yaml",
-  recursive = TRUE,
-  full.names = TRUE
-)) {
-  url <- yaml::read_yaml(f)$Documentation
-
-  is_error <- tryCatch(
-    httr2::request(url) |>
-      httr2::req_error(is_error = \(resp) FALSE) |>
-      httr2::req_perform() |>
-      httr2::resp_is_error(),
-    error = function(e) {
-      warning(paste0(url, ": ", e$message))
-      TRUE
-    }
+for (shortname in podaac) {
+  write_nasa_aws_yaml(
+    shortname,
+    tutorials_df,
+    file.path("yaml", "podaac")
   )
-
-  if (is_error) {
-    cat(paste("Broken DOI link in", f, ":", url, "\n"))
-  }
 }
