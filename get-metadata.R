@@ -47,6 +47,16 @@ for (shortname in first_batch) {
   )
 }
 
+## Check long names and manually edit:
+sapply(
+  list.files("yaml", pattern = "*.yaml", recursive = TRUE, full.names = TRUE),
+  \(x) {
+    f <- yaml::read_yaml(x)
+    nchar(f$Name)
+  }
+) |>
+  Filter(\(x) x > 130, x = _)
+
 ## Test DOIs:
 
 for (f in list.files(
