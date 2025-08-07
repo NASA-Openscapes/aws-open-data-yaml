@@ -74,6 +74,17 @@ get_tags <- function(umm) {
 
   aws_tags <- aws_tags()
 
+  flat_umm <- unlist(umm) |> tolower()
+
+  parsed_tags <- purrr::map(aws_tags, \(tag) {
+    stringr::str_extract(flat_umm, pattern = stringr::fixed(tolower(tag)))
+  }) |>
+    unlist() |>
+    na.omit() |>
+    unique()
+
+  tags <- unique(c(tags, parsed_tags))
+
   not_valid_tags <- setdiff(
     tolower(tags),
     tolower(aws_tags)
@@ -83,7 +94,9 @@ get_tags <- function(umm) {
     update_tag_counts(not_valid_tags, "unlisted_tags.csv")
   }
 
-  c("aws-pds", aws_tags[tolower(aws_tags) %in% tolower(tags)])
+  c("aws-pds", aws_tags[tolower(aws_tags) %in% tolower(tags)]) |>
+    unique() |>
+    sort()
 }
 
 update_tag_counts <- function(tags, csv_file) {
