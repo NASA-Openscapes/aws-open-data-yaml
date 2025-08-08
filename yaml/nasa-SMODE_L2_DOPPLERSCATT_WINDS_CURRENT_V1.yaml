@@ -6,33 +6,12 @@ Documentation: https://doi.org/10.5067/SMODE-DSCT2
 ManagedBy: NASA
 UpdateFrequency: From 2021-10-20 to 2021-11-05 (1 second - < 1 minute)
 Tags:
-  - aws-pds
-  - EARTH SCIENCE
-  - ATMOSPHERE
-  - ATMOSPHERIC WINDS
-  - SURFACE WINDS
-  - OCEANS
-  - OCEAN CIRCULATION
-  - OCEAN CURRENTS
-  - SURFACE CURRENTS
-  - SPECTRAL/ENGINEERING
-  - RADAR
-  - DOPPLER VELOCITY
-  - S-MODE
-  - Sub-Mesoscale Ocean Dynamics Experiment
-  - earth science
   - atmosphere
-  - atmospheric winds
-  - surface winds
-  - oceans
   - ocean circulation
   - ocean currents
-  - spectral/engineering
+  - oceans
   - radar
-  - doppler velocity
-  - dopplerscatt
-  - airborne
-  - scatterometer
+  - aws-pds
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'S-MODE DopplerScatt Level 2 Ocean Winds and Currents Version 1.
@@ -49,4 +28,12 @@ DataAtWork:
       URL: 10.3390/rs10040576
       AuthorName: Rodríguez, E., Wineteer, A., Perkovic-Martin, D., Gál, T., Stiles,
         B., Niamsuwan, N., & Monje, R.
-  Tutorials: Fill in
+  Tutorials: 
+    -Title: S-MODE Workshop: Science Case Study Airborne Part 2
+    Services: Jupiter Notebook
+    author: PODAAC
+    url: https://github.com/podaac/2022-SMODE-Open-Data-Workshop/blob/main/notebooks/VisualizeDopplerScattData.ipynb
+    -Title: S-MODE Workshop: Science Case Study Airborne Part 1
+    Services: Jupiter Notebook
+    author: PODAAC
+    url: https://github.com/podaac/2022-SMODE-Open-Data-Workshop/blob/main/notebooks/DownloadDopplerScattData.ipynb
