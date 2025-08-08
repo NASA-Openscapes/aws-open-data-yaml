@@ -13,14 +13,15 @@ Documentation: /10.5067/SWOT-RASTER-D
 ManagedBy: NASA
 UpdateFrequency: From 2022-12-16 to Ongoing
 Tags:
-  - aws-pds
-  - EARTH SCIENCE
-  - TERRESTRIAL HYDROSPHERE
-  - SURFACE WATER
-  - SURFACE WATER FEATURES
-  - RIVERS/STREAMS
-  - SURFACE WATER PROCESSES/MEASUREMENTS
-  - LAKES/RESERVOIRS
+- coastal
+- earth observation
+- geospatial
+- global
+- orbit
+- radar
+- surface water
+- water
+- aws-pds
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'SWOT Level 2 Water Mask Raster Image Data Product, Version D. (Format:
@@ -35,4 +36,7 @@ DataAtWork:
     - Title: 'Surface Water and Ocean Topography Mission (SWOT) Project: Science Requirements
         Document, JPL D-61923, Rev. B'
       AuthorName: JPL Internal Document
-  Tutorials: Fill in
+  Tutorials:
+    -Title: Search and Download SWOT Data via earthaccess
+    Services: Jupyter Notebook
+    AuthorName: Cassandra Nickles
