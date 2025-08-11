@@ -8,3 +8,5 @@ We are querying the [CMR collections API](https://cmr.earthdata.nasa.gov/search/
 
 Tutorials are being recorded in a [Google Sheet](https://docs.google.com/spreadsheets/d/1ZqlYRvoZnLZIl5eOJ2gGUuu5E9K_P2c446RPHJ4B06w) and
 queried using the `googlesheets4` package.
+
+Submitted this work as a [Pull Request to AWS GitHub](https://github.com/awslabs/open-data-registry/pull/2817) on Aug 8, 2025.
