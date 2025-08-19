@@ -9,21 +9,13 @@ ManagedBy: NASA
 UpdateFrequency: From 2002-08-31 to Ongoing (Hourly - < Daily)
 Tags:
   - aws-pds
-  - EARTH SCIENCE
-  - OCEANS
-  - OCEAN TEMPERATURE
-  - SEA SURFACE TEMPERATURE
-  - FOUNDATION SEA SURFACE TEMPERATURE
-  - GHRSST
-  - sea surface temperature
-  - Level 4
-  - SST
-  - MUR
-  - MUR25
-  - foundation SST
-  - 0.25 degree
-  - L4
-  - SST anomaly
+  - datacenter
+  - earth observation
+  - global
+  - ice
+  - oceans
+  - us
+  - water
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'GHRSST Level 4 MUR 0.25deg Global Foundation Sea Surface Temperature
@@ -38,4 +30,8 @@ DataAtWork:
     - Title: A multi-scale high-resolution analysis of global sea surface temperature
       URL: https://doi.org/10.1016/j.rse.2017.07.029
       AuthorName: Chin, T.M,  J. Vazquez-Cuervo, and E.M. Armstrong
-  Tutorials: Fill in
+  Tutorials: 
+    - Title: Mapping Sea Surface Temperature Anomalies to Observe Potential El Niño Conditions
+      NotebookURL: https://podaac.github.io/tutorials/notebooks/datasets/enso_MUR_tutorial_final.html
+      Services: Jupyter Notebook
+      AuthorName: Julie Sanchez

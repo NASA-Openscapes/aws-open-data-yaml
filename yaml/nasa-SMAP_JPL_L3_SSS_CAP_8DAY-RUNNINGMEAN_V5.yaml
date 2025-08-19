@@ -8,34 +8,15 @@ Contact: 'Help Desk: podaac@podaac.jpl.nasa.gov'
 ManagedBy: NASA
 UpdateFrequency: From 2015-04-30 to Ongoing (8 Day)
 Tags:
+  - earth observation
+  - geoscience
+  - global
+  - ice
+  - oceans
+  - orbit
+  - radar
+  - soil moisture
   - aws-pds
-  - EARTH SCIENCE
-  - SALINITY
-  - SALINITY/DENSITY
-  - OCEANS
-  - NONE
-  - SURFACE WINDS
-  - OCEAN WINDS
-  - JPLSMAPSSSV50
-  - L3
-  - Level 3
-  - 8 day running mean
-  - SMAP
-  - SMAP-SSS
-  - Soil Moisture Active
-  - Passive
-  - salinity
-  - polar
-  - sun-synchronous
-  - sss
-  - sea surface
-  - psu
-  - NASA
-  - project
-  - mission
-  - JPL
-  - CAP
-  - combined active/passive
 License: '[Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/)'
 Resources:
   - Description: 'JPL SMAP Level 3 CAP Sea Surface Salinity Standard Mapped Image
@@ -48,4 +29,7 @@ Resources:
 DataAtWork:
   Publications:
     - {}
-  Tutorials: Fill in
+  Tutorials:  
+    - Title: SMAP Sea Surface Salinity and IMERG Precipitation Tutorial
+      Services: Jupyter Notebook
+      AuthorName: Julie Sanchez
